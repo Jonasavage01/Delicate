@@ -1,0 +1,828 @@
+/* Estilos base */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+
+  /* Estilo para el contenedor principal .xd-1 */
+  .header,
+  .header * {
+    box-sizing: border-box;
+  }
+
+  .header {
+    background: #0a472e;
+    padding: 1.1% 1.6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    position: relative;
+  }
+  /* Estilo para el encabezado .encabezado */
+  .title-site {
+  color: var(--white, #ffffff);
+  text-align: center;
+  font: 400 1.2vw 'Nunito', sans-serif;
+  position: relative;
+  }
+
+  /* Media query para ajustar el tamaño del texto en pantallas más pequeñas */
+  @media screen and (max-width: 600px) {
+  .title-site {
+    font-size: 4vw;
+  }
+  }
+
+  /* Barra de búsqueda */
+  .midle {
+    background: var(--gray-scale-white, #ffffff);
+    height: 6.8vw;
+    margin-top: 2vw;
+    position: relative;
+    box-shadow: inset 0px -1px 0px 0px rgba(229, 229, 229, 1.00);
+    display: flex;
+    max-width: 100%;
+  }
+
+  .search {
+    border-radius: 7px;
+    border: 1px solid var(--gray-scale-gray-100, #e6e6e6);
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1vw;
+  }
+
+  .searech {
+    padding: 12px 18px 12px 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 83%;
+  }
+
+  .search2 {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .group-01 {
+    height: auto;
+    position: absolute;
+    right: 12.5%;
+    left: 12.5%;
+    width: 75%;
+    bottom: 12.5%;
+    top: 12.5%;
+    height: 75%;
+    overflow: visible;
+  }
+
+  .search3 {
+    color: var(--gray-scale-gray-500, #808080);
+    text-align: left;
+    font: 400 18px/21px 'Poppins-Regular', sans-serif;
+    width: 370px;
+    border: 0px solid var(--gray-scale-gray-100, #e6e6e6);
+  }
+
+  button {
+    background: var(--branding-success, #00b207);
+    border-radius: 0px 6px 6px 0px;
+    padding: 14px 24px 14px 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+    .search-button {
+    color: var(--gray-scale-white, #ffffff);
+    text-align: left;
+    font: var(--body-small-body-small-600, 600 14px/120% 'Poppins-SemiBold', sans-serif);
+    border-radius: 0px 6px 6px 0px;
+
+  }
+
+  /* Iconos */
+  .icons {
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    left: 70vw;
+    top: 7.2vw;
+  }
+
+  .devider {
+    border: 2px solid var(--gray-scale-gray-200, #cccccc);
+    flex-shrink: 0;
+    width: 1.8vw;
+    position: relative;
+    transform-origin: 0 0;
+    transform: rotate(90deg) scale(1, 1);
+    margin-top: -1.3vw;
+  }
+
+  .shopping-card {
+    display: flex;
+    flex-direction: row;
+    gap: 0.2vw;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .shopping-cart {
+    color: var(--gray-scale-gray-700, #2aa5f1);
+    text-align: left;
+    font: 400 18px/21px 'Poppins-Regular', sans-serif;
+    position: relative;
+  }
+
+  .logo {
+    display: block;
+    height: auto;
+    max-width: 11.3vw;
+    position: absolute;
+    left: 9.7%;
+    transform-origin: 0 0;
+    transform: rotate(-0.248deg) scale(1, 1);
+    transform: translatey(-120%);
+
+  }
+
+  .shopping-cart-link {
+    text-decoration: none;
+    color: var(--gray-scale-gray-700, #357fff);
+  }
+
+
+
+  /* Diseño Responsivo */
+  @media (max-width: 768px) {
+    .search {
+      left: 10%;
+      transform: none;
+    }
+
+    .icons {
+      left: 10%;
+      transform: none;
+    }
+  }
+
+
+  /* Estilos para el menú de navegación */
+  .main-container {
+    display: flex;
+  }
+
+  .navigation,
+  .navigation * {
+    box-sizing: border-box;
+  }
+
+  .navigation {
+    display: flex;
+    margin: 10px auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    max-width: 100%;
+    padding: 0 20px; /* Ajuste el padding para evitar problemas de superposición */
+    margin-left: 140px;
+  }
+
+  .navigation-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alineado a la derecha */
+    flex-grow: 1; /* Esto permite que el espacio restante se distribuya entre los elementos */
+  }
+
+  .icons-container {
+    display: flex;
+    gap: 32px;
+    align-items: center; /* Alinear los íconos al centro verticalmente */
+  }
+
+  .about-Us-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .About-Us,
+  .shop,
+  .blog,
+  .contact,
+  .home {
+    color: var(--dark, #666666);
+    text-align: left;
+    font: 700 18px 'Nunito', sans-serif;
+    position: relative;
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+
+  .home {
+    color: var(--dark, #00B207);
+  }
+
+  .About-Us:hover,
+  .home:hover,
+  .shop:hover,
+  .blog:hover,
+  .contact:hover {
+    color: #34db37;
+  }
+
+
+  /* Estilos Responsive Design */
+  @media (max-width: 768px) {
+    .navigation {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .navigation-container {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    .icons-container {
+      margin-top: 20px;
+    }
+  }
+
+  /* Estilos para Phone */
+  .contact-info,
+  .contact-info * {
+    box-sizing: border-box;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    flex-shrink: 0;
+    position: relative;
+    margin-right: 303px;
+  }
+
+  .phone-icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .phone-icon-svg {
+    height: auto;
+    position: absolute;
+    right: 12.62%;
+    left: 15.62%;
+    width: 71.75%;
+    bottom: 15.62%;
+    top: 12.63%;
+    height: 71.75%;
+    overflow: visible;
+  }
+
+  .phone-number {
+    color: var(--gray-scale-gray-900, #1a1a1a);
+    text-align: left;
+    font: var(--body-small-body-small-500, 500 17px/150% 'Poppins-Medium', sans-serif);
+    position: relative;
+  }
+
+  /* Estilos para responsivo */
+  @media (max-width: 767px) {
+    .contact-info {
+      margin-right: 0; /
+    }
+
+    .phone-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .phone-icon-svg {
+      right: 10%;
+      left: 15%;
+      width: 75%;
+      bottom: 15%;
+      top: 12.5%;
+    }
+
+    .phone-number {
+      font-size: 12px;
+    }
+  }
+
+  /* Baner icon */
+
+  .breadcrumbs, .breadcrumbs * {
+    box-sizing: border-box;
+    }
+  .breadcrumbs {
+   background: linear-gradient(90.02deg, rgba(0, 0, 0, 0.70) 0%,rgba(0, 0, 0, 0.00) 100%);
+    height: 120px;
+
+           position: relative;
+
+       }
+
+  .location {
+
+           display: flex;
+
+           flex-direction: row;
+
+           gap: 12px;
+
+           align-items: center;
+
+           justify-content: flex-start;
+
+
+
+           position: absolute;
+    left: 160px;
+   top: calc(50% - 12px);
+
+
+       }
+
+  .home-1-1 {
+   flex-shrink: 0;
+   width: 24px;
+    height: 24px;
+           position: relative;
+
+       overflow: hidden;
+
+   }
+
+  .vegetables {
+   color: var(--branding-success, #00b207);
+   text-align: left;
+   font: var(--body-medium-body-medium-400, 400 16px/150% 'Poppins-Regular', sans-serif);
+
+           position: relative;
+
+       }
+
+
+  /* Banner */
+  .banner {
+    display: flex;
+    margin-top: -110px;
+    position: static;
+    width: 100%;
+  }
+
+  /* Estilos responsivos*/
+  .breadcrumbs, .breadcrumbs * {
+    box-sizing: border-box;
+  }
+
+  /* Estilos responsivos */
+  @media (max-width: 767px) {
+    .breadcrumbs {
+      height: auto; /* Ajusta la altura automáticamente en dispositivos pequeños */
+    }
+
+    .location {
+      left: 10px; /
+    }
+
+    .home-1-1 {
+      width: 20px;
+      height: 20px;
+    }
+
+    .vegetables {
+      font-size: 14px;
+    }
+
+    /* Banner */
+    .banner {
+      margin-top: -90px;
+    }
+  }
+
+
+/* Contact info */
+.contact-information, .contact-information * {
+    box-sizing: border-box;
+}
+
+.contact-information {
+    background: var(--gray-scale-white, #ffffff);
+    border-radius: 8px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    box-shadow: 0 0 56px 0 rgba(0, 38, 3, 0.08);
+    height: 100%;
+    width: 20%;
+    margin-left: 4vw;
+    margin-top: 2.7vw;
+}
+
+/* Añade sombras para resaltar los bordes */
+.address-section {
+    border-radius: 10px;
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.map-pin-icon {
+    flex-shrink: 0;
+    width: 51px;
+    height: 51px;
+    position: relative;
+    overflow: hidden;
+}
+
+.location-icon {
+    height: auto;
+    position: absolute;
+    right: 18.75%;
+    left: 18.75%;
+    width: 62.5%;
+    bottom: 9.38%;
+    top: 9.38%;
+    height: 81.25%;
+    overflow: visible;
+}
+
+.address-text {
+    color: var(--gray-scale-gray-800, #333333);
+    text-align: center;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 16px;
+    line-height: 170%;
+    font-weight: 400;
+    position: relative;
+    width: 272px;
+}
+
+.divider-05 {
+    border-style: solid;
+    border-color: var(--gray-scale-gray-100, #e6e6e6);
+    border-width: 1px 0 0 0;
+    flex-shrink: 0;
+    width: 272px;
+    height: 0;
+    position: relative;
+}
+
+.email-section {
+    border-radius: 10px;
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.email-icon {
+    flex-shrink: 0;
+    width: 51px;
+    height: 51px;
+    position: relative;
+    overflow: hidden;
+}
+
+.email-envelope-icon {
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 5.95px;
+    overflow: visible;
+}
+
+.email-address {
+    color: var(--gray-scale-gray-800, #333333);
+    text-align: center;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 16px;
+    line-height: 170%;
+    font-weight: 400;
+    position: relative;
+    width: 272px;
+}
+
+.call-section-02 {
+    border-radius: 10px;
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.phone-call-icon-02 {
+    flex-shrink: 0;
+    width: 51px;
+    height: 51px;
+    position: relative;
+    overflow: hidden;
+}
+
+.phone-icon-02 {
+    height: auto;
+    position: absolute;
+    right: 10.93%;
+    left: 10.94%;
+    width: 78.13%;
+    bottom: 10.94%;
+    top: 10.94%;
+    height: 78.12%;
+    overflow: visible;
+}
+
+.phone-numbers {
+    color: var(--gray-scale-gray-800, #333333);
+    text-align: center;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 16px;
+    line-height: 170%;
+    font-weight: 400;
+    position: relative;
+    width: 272px;
+}
+
+
+/* Contact section */
+.contact-section, .contact-section * {
+    box-sizing: border-box;
+}
+
+.contact-section {
+position: absolute;
+inset: 0;
+transform: translateX(-50%);
+max-width: 25%;
+margin-top: auto;
+
+}
+
+.background {
+
+  background: var(--gray-scale-white, #ffffff);
+  border-radius: 8px;
+  width: 984px;
+  height: 507px;
+  position: absolute;
+  left: 636px;
+  top: 395px;
+  box-shadow: 0px 0px 56px 0px rgba(0, 38, 3, 0.08);
+
+}
+
+.contact-button {
+    background: var(--branding-success, #00b207);
+    display: flex;
+    border: none;
+    cursor: pointer;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 705px;
+    top: 760px;
+    cursor: pointer;
+}
+
+.button-text {
+    color: var(--gray-scale-white, #ffffff);
+    text-align: left;
+    font-family: 'Poppins-SemiBold', sans-serif;
+    font-size: 16px;
+    line-height: 120%;
+    font-weight: 600;
+    position: relative;
+}
+
+.subject-field {
+    background: var(--gray-scale-white, #ffffff);
+    border-radius: 6px;
+    border-style: solid;
+    border-color: var(--gray-scale-gray-100, #e6e6e6);
+    border-width: 1px;
+    padding: 14px 16px;
+    width: 884px;
+    height: auto;
+    position: absolute;
+    left: 686px;
+    top: 679px;
+}
+
+.field-label {
+   width: 100%;
+  height: auto;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: 'Poppins-Regular', sans-serif;
+  font-size: 16px;
+  line-height: 130%;
+  color: var(--gray-scale-gray-600, #666666);
+  padding: 0;
+  margin: 0;
+}
+
+.greeting-field {
+    background: var(--gray-scale-white, #ffffff);
+    border-radius: 6px;
+    border-style: solid;
+    border-color: var(--branding-success, #00b207);
+    border-width: 1px;
+    padding: 14px 16px;
+    width: 884px;
+    height: 49px;
+    position: absolute;
+    left: 686px;
+    top: 614px;
+}
+
+.greeting-text {
+  width: 100%;
+  height: auto;
+  border: none;
+  background: transparent;
+  font-family: 'Poppins-Regular', sans-serif;
+  font-size: 16px;
+  line-height: 130%;
+  color: var(--gray-scale-gray-600, #666666);
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+}
+
+.email-field {
+    background: var(--gray-scale-white, #ffffff);
+    border-radius: 6px;
+    border-style: solid;
+    border-color: var(--gray-scale-gray-100, #e6e6e6);
+    border-width: 1px;
+    padding: 14px 16px;
+    width: 434px;
+    height: auto;
+    position: absolute;
+    left: 1136px;
+    top: 549px;
+
+}
+
+.filled-email {
+  width: 100%;
+  height: auto;
+  border: none;
+  background: transparent;
+  font-family: 'Poppins-Regular', sans-serif;
+  font-size: 16px;
+  line-height: 130%;
+  color: var(--gray-scale-gray-600, #666666);
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+}
+
+/* Estilos para el campo de nombre */
+.template-field {
+  background: var(--gray-scale-white, #ffffff);
+  border-radius: 6px;
+  border-style: solid;
+  border-color: var(--gray-scale-gray-100, #e6e6e6);
+  border-width: 1px;
+  padding: 14px 16px;
+  width: 434px;
+  height: auto;
+  position: absolute;
+  left: 686px;
+  top: 549px;
+}
+
+.text {
+  width: 100%;
+  height: auto;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: 'Poppins-Regular', sans-serif;
+  font-size: 16px;
+  line-height: 130%;
+  color: var(--gray-scale-gray-600, #666666);
+  padding: 0;
+  margin: 0;
+}
+
+.filled-template {
+    color: var(--gray-scale-gray-600, #666666);
+    text-align: left;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: 400;
+    position: absolute;
+    left: 16px;
+    top: 14px;
+    border: none;
+  outline: none;
+}
+
+.contact-message {
+    color: var(--gray-scale-gray-500, #808080);
+    text-align: left;
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 400;
+    position: absolute;
+    left: 686px;
+    top: 483px;
+    width: 486px;
+    border: none;
+  outline: none;
+}
+
+.say-hello-prompt {
+    color: var(--gray-scale-gray-900, #1a1a1a);
+    text-align: left;
+    font-family: 'Poppins-SemiBold', sans-serif;
+    font-size: 24px;
+    line-height: 150%;
+    font-weight: 600;
+    position: relative;
+    left: 686px;
+    top: 430px;
+    display: flex;
+    border: none;
+  outline: none;
+
+
+}
+
+
+  /* Estilos del footer .footer */
+#miFooter {
+    background-color: #0a472e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 10px;
+    clear: both;
+    margin-top: 100px;
+  }

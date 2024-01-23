@@ -1,0 +1,67 @@
+.login, .login * {
+    box-sizing: border-box;
+    }
+.login {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    margin-top: 15vw;
+    }
+
+ .registro-exitoso {
+    color: var(--gray-scale-gray-900, #1a1a1a);
+    text-align: left;
+    font-family: var(--heading-05-heading-05-600-font-family, 'Poppins-SemiBold', sans-serif);
+    font-size: var(--heading-05-heading-05-600-font-size, 50px);
+    line-height: var(--heading-05-heading-05-600-line-height, 120%);
+    font-weight: var(--heading-05-heading-05-600-font-weight, 600);
+    position: relative;
+    width: 30%;
+    height: 34px;
+
+    }
+
+
+ .gracias-por-registrarte-en-nuestro-sitio-ya-puedes-iniciar-sesi-n {
+    color: var(--gray-scale-gray-900, #1a1a1a);
+    text-align: left;
+    font-family: var(--body-small-body-small-500-font-family, 'Poppins-Medium', sans-serif);
+    font-size: var(--body-small-body-small-500-font-size, 25px);
+    line-height: var(--body-small-body-small-500-line-height, 150%);
+    font-weight: var(--body-small-body-small-500-font-weight, 500);
+    position: relative;
+    width: 100%;
+    margin-right: 2vw;
+    margin-top: 2vw;
+    }
+
+ .button {
+    background: var(--branding-success, #00b207);
+    border-radius: 43px;
+    padding: 14px 32px 14px 32px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 16%;
+    height: 41px;
+    position: relative;
+
+    }
+
+ .normal {
+    color: var(--gray-scale-white, #ffffff);
+    text-align: left;
+    font-family: var(--body-small-body-small-600-font-family, 'Poppins-SemiBold', sans-serif);
+    font-size: var(--body-small-body-small-600-font-size, 14px);
+    line-height: var(--body-small-body-small-600-line-height, 120%);
+    font-weight: var(--body-small-body-small-600-font-weight, 600);
+    position: relative;
+    }
+
