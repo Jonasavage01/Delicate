@@ -1,0 +1,1633 @@
+
+/* Estilos base */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Estilo para el contenedor principal .xd-1 */
+.header,
+.header * {
+  box-sizing: border-box;
+}
+
+.header {
+  background: #0a472e;
+  padding: 1% 1.5%;
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+/* Barra de búsqueda */
+.midle {
+  background: var(--gray-scale-white, #ffffff);
+  height: 6.8vw;
+  margin-top: 2vw;
+  position: relative;
+  box-shadow: inset 0px -1px 0px 0px rgba(229, 229, 229, 1.00);
+  display: flex;
+  max-width: 100%;
+
+}
+
+.search {
+  border-radius: 7px;
+  border: 1px solid var(--gray-scale-gray-100, #e6e6e6);
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1vw;
+
+}
+
+.searech {
+  padding: 12px 18px 12px 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 83%;
+
+}
+
+.search2 {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  position: relative;
+  border: none;
+  outline: none;
+}
+
+.group-01 {
+  height: auto;
+  position: absolute;
+  right: 12.5%;
+  left: 12.5%;
+  width: 75%;
+  bottom: 12.5%;
+  top: 12.5%;
+  height: 75%;
+  overflow: visible;
+}
+
+.search3 {
+  color: var(--gray-scale-gray-500, #808080);
+  text-align: left;
+  font: 400 18px/21px 'Poppins-Regular', sans-serif;
+  width: 370px;
+  border: 0px solid var(--gray-scale-gray-100, #e6e6e6);
+  border: none;
+  outline: none;
+}
+
+button {
+  background: var(--branding-success, #00b207);
+  border-radius: 0px 6px 6px 0px;
+  padding: 14px 24px 14px 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+  .search-button {
+  color: var(--gray-scale-white, #ffffff);
+  text-align: left;
+  font: var(--body-small-body-small-600, 600 14px/120% 'Poppins-SemiBold', sans-serif);
+  border-radius: 0px 6px 6px 0px;
+  border: none;
+  outline: none;
+
+
+}
+
+/* Iconos */
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  left: 70vw;
+  top: 5.6vw;
+}
+
+.devider {
+  border: 2px solid var(--gray-scale-gray-200, #cccccc);
+  flex-shrink: 0;
+  width: 1.8vw;
+  position: relative;
+  transform-origin: 0 0;
+  transform: rotate(90deg) scale(1, 1);
+  margin-top: -1.3vw;
+}
+
+.shopping-card {
+  display: flex;
+  flex-direction: row;
+  gap: 0.2vw;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.shopping-cart {
+  color: var(--gray-scale-gray-700, #2aa5f1);
+  text-align: left;
+  font: 400 18px/21px 'Poppins-Regular', sans-serif;
+  position: relative;
+}
+
+.logo {
+  display: block;
+  height: auto;
+  max-width: 11.3vw;
+  position: absolute;
+  left: 9.7%;
+  transform-origin: 0 0;
+  transform: rotate(-0.248deg) scale(1, 1);
+  transform: translatey(-120%);
+
+}
+
+.shopping-cart-link {
+  text-decoration: none;
+  color: var(--gray-scale-gray-700, #357fff);
+}
+
+
+/* Diseño Responsivo */
+@media (max-width: 768px) {
+  .search {
+    left: 10%;
+    transform: none;
+  }
+
+  .icons {
+    left: 10%;
+    transform: none;
+  }
+}
+
+
+/* Estilos para el menú de navegación */
+.main-container {
+  display: flex;
+}
+
+.navigation,
+.navigation * {
+  box-sizing: border-box;
+}
+
+.navigation {
+  display: flex;
+  margin: 10px auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  max-width: 100%;
+  padding: 0 20px;
+  margin-left: 140px;
+
+}
+
+.navigation-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Alineado a la derecha */
+  flex-grow: 1; /* Esto permite que el espacio restante se distribuya entre los elementos */
+  border: none;
+  outline: none;
+}
+
+.icons-container {
+  display: flex;
+  gap: 32px;
+  align-items: center; /* Alinear los íconos al centro verticalmente */
+}
+
+.about-Us-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.About-Us,
+.shop,
+.blog,
+.contact,
+.home {
+  color: var(--dark, #666666);
+  text-align: left;
+  font: 700 18px 'Nunito', sans-serif;
+  position: relative;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.home {
+  color: var(--dark, #00B207);
+}
+
+.About-Us:hover,
+.home:hover,
+.shop:hover,
+.blog:hover,
+.contact:hover {
+  color: #34db37;
+}
+
+
+/* Estilos Responsive Design */
+@media (max-width: 768px) {
+  .navigation {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navigation-container {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .icons-container {
+    margin-top: 20px;
+  }
+}
+
+/* Estilos para Phone */
+.contact-info,
+.contact-info * {
+  box-sizing: border-box;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+  margin-right: 303px;
+}
+
+.phone-icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.phone-icon-svg {
+  height: auto;
+  position: absolute;
+  right: 12.62%;
+  left: 15.62%;
+  width: 71.75%;
+  bottom: 15.62%;
+  top: 12.63%;
+  height: 71.75%;
+  overflow: visible;
+}
+
+.phone-number {
+  color: var(--gray-scale-gray-900, #1a1a1a);
+  text-align: left;
+  font: var(--body-small-body-small-500, 500 17px/150% 'Poppins-Medium', sans-serif);
+  position: relative;
+}
+
+/* Estilos para responsivo */
+@media (max-width: 767px) {
+  .contact-info {
+    margin-right: 0; /
+  }
+
+  .phone-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .phone-icon-svg {
+    right: 10%;
+    left: 15%;
+    width: 75%;
+    bottom: 15%;
+    top: 12.5%;
+  }
+
+  .phone-number {
+    font-size: 12px;
+  }
+}
+
+/* Baner icon */
+
+.breadcrumbs, .breadcrumbs * {
+  box-sizing: border-box;
+  }
+.breadcrumbs {
+ background: linear-gradient(90.02deg, rgba(0, 0, 0, 0.70) 0%,rgba(0, 0, 0, 0.00) 100%);
+  height: 120px;
+
+         position: relative;
+
+     }
+
+.location {
+
+         display: flex;
+
+         flex-direction: row;
+
+         gap: 12px;
+
+         align-items: center;
+
+         justify-content: flex-start;
+
+
+
+         position: absolute;
+  left: 160px;
+ top: calc(50% - 12px);
+
+
+     }
+
+.home-1-1 {
+ flex-shrink: 0;
+ width: 24px;
+  height: 24px;
+         position: relative;
+
+     overflow: hidden;
+     margin-top: -10px;
+
+ }
+
+.vegetables {
+ color: var(--branding-success, #00b207);
+ text-align: left;
+ font: var(--body-medium-body-medium-400, 400 16px/150% 'Poppins-Regular', sans-serif);
+
+         position: relative;
+
+     }
+
+
+/* Banner */
+.banner {
+  display: flex;
+  margin-top: -110px;
+  position: static;
+  width: 100%;
+}
+
+/* Estilos responsivos*/
+.breadcrumbs, .breadcrumbs * {
+  box-sizing: border-box;
+}
+
+/* Estilos responsivos */
+@media (max-width: 767px) {
+  .breadcrumbs {
+    height: auto;
+  }
+
+  .location {
+    left: 10px; /
+  }
+
+  .home-1-1 {
+    width: 20px;
+    height: 20px;
+  }
+
+  .vegetables {
+    font-size: 14px;
+  }
+
+  /* Banner */
+  .banner {
+    margin-top: -90px;
+  }
+}
+
+/* Imagenes principales */
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-image-1,
+.main-image-2 {
+  width: 100%;
+  height: auto;
+  max-width: 50%;
+}
+
+/* Estilo para el texto del banner .banner-text */
+.banner-text {
+  text-align: center;
+  width: 100%;
+  max-width: 616px;
+  padding: 15% 0 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+  padding-top: 100px;
+}
+
+
+/* Estilo para 'Healthy Days' */
+.healthy-days,
+.organic-soaps {
+  text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  margin-top: 220px;
+}
+
+.healthy-days {
+  color: #ffffff;
+  font: 900 37px 'Nunito', sans-serif;
+  letter-spacing: 2px;
+  animation: glow 2s ease-in-out infinite alternate;
+
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgb(232, 239, 5), 0 0 20px #deaf13, 0 0 30px #ff8a00;
+  }
+  to {
+    text-shadow: 0 0 15px #2ad817, 0 0 35px #5ce52e, 0 0 35px #74e52e;
+  }
+}
+
+
+.organic-soaps {
+  color: var(--white, #ffffff);
+  font: 800 71px/116.5% 'Lora', sans-serif;
+  margin-top: 20px;
+}
+
+/* Estilo para el botón .Button */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+.Button {
+  background: var(--sdfs, #138a58);
+  border-radius: 23px;
+  padding: 7px 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  max-width: 30%;
+  margin-left: 200px;
+  margin-top: 30px;
+}
+
+.learn-more {
+  color: var(--white, #ffffff);
+  font: 700 20px 'Nunito', sans-serif;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+.shopping-cart-icon {
+  width: 25px;
+  height: auto;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+/* Estilo para la sección "A Few Words About Us" .about-us */
+.about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Estilo para la sección de imagen y texto .image-and-text */
+.image-and-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Estilo para la imagen .image-2 */
+.image-2 {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-top: 50px;
+  margin-left: 0; /* Sin margen a la izquierda en dispositivos móviles */
+}
+
+/* Estilo para el contenedor de texto .text-container01 */
+.text-container01 {
+  text-align: center;
+  margin-right: 0;
+}
+
+
+/* Estilos Responsive Design */
+@media (max-width: 768px) {
+  .image-and-text {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .image-2 {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .text-container01 {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .about-us-heading {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  .shop-description {
+    font-size: 32px;
+    margin-left: 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .buy-products-description {
+    font-size: 16px; /* Ajusté el tamaño de la fuente en dispositivos móviles */
+    margin-left: 0;
+  }
+}
+
+/* Estilo para la sección "A Few Words About Us" .about-us */
+.about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Estilo para la sección de imagen y texto .image-and-text */
+.image-and-text {
+  display: flex;
+  flex-direction: row; /* Volví al diseño original de fila para dispositivos no móviles */
+  gap: 20px;
+  align-items: center;
+}
+
+/* Estilo para la imagen .image-2 */
+.image-2 {
+  max-width: 44%; /* Mantengo el ancho máximo en dispositivos no móviles */
+  height: auto;
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+/* Estilo para el contenedor de texto .text-container01 */
+.text-container01 {
+  text-align: left; /* Alinear a la izquierda en dispositivos no móviles */
+  margin-right: 250px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para el encabezado "A Few Words About Us" .about-us-heading */
+.about-us-heading {
+  color: #2bd704b1;
+  font: 500 22px/172% 'Nunito', sans-serif;
+  margin-top: 100px;
+  margin-left: 60px;
+}
+
+/* Estilo para la descripción de la tienda .shop-description */
+.shop-description {
+  color: var(--dark, #042117);
+  font: 700 48px/116.5% 'Lora', sans-serif;
+  width: 588px;
+  margin-left: 60px;
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+
+/* Estilo para la descripción de compra de productos .buy-products-description */
+.buy-products-description {
+  color: #7d7d7d;
+  font: 400 20px/172% 'Nunito', sans-serif;
+  align-self: stretch;
+  margin-left: 60px;
+}
+
+/* Estilos Responsive Design */
+@media (max-width: 768px) {
+  .image-and-text {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .image-2 {
+    max-width: 100%;
+    margin-left: 0; /* Centrar la imagen en dispositivos móviles */
+  }
+
+  .text-container01 {
+    text-align: center; /* Alinear al centro en dispositivos móviles */
+    margin-right: 0;
+  }
+
+  .about-us-heading {
+    margin-top: 20px;
+    margin-left: 0; /* Centrar en dispositivos móviles */
+  }
+
+  .shop-description {
+    font-size: 32px;
+    margin-left: 0;
+    margin-top: 10px; /* Reduje el espacio superior en dispositivos móviles */
+    margin-bottom: 20px;
+  }
+
+  .buy-products-description {
+    font-size: 16px;
+    margin-left: 0;
+  }
+}
+
+/* Beneficios */
+.Benefits-setion,
+.Benefits-setion * {
+  box-sizing: border-box;
+}
+
+.Benefits-setion {
+  background: var(--gray-scale-white, #ffffff);
+  border-radius: 8px;
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  box-shadow: 0px 8px 40px 0px rgba(0, 38, 3, 0.08);
+  margin-top: -20px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.icon-05,
+.shopping-bag,
+.headphones-1,
+.package {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.group-20,
+.group-19,
+.group-21 {
+  height: auto;
+  position: absolute;
+  width: 94.05%;
+  top: 0;
+  bottom: 0;
+  left: 2.97%;
+  right: 2.97%;
+  overflow: visible;
+}
+
+.text-medium,
+.text-small {
+  color: var(--gray-scale-gray-400, #999999);
+  text-align: left;
+  font: var(--body-small-body-small-400, 400 20px/150% 'Poppins-Regular', sans-serif);
+  position: relative;
+  width: 250px;
+}
+
+.text-medium-bold {
+  color: var(--gray-scale-gray-900, #1a1a1a);
+  text-align: left;
+  font: var(--body-medium-body-medium-600, 600 22px/120% 'Poppins-SemiBold', sans-serif);
+  position: relative;
+  width: 250px;
+}
+
+
+/* Información Sesión 2 */
+.soap5, .soap1 {
+  max-width: 40%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.soap5 {
+  margin-left: 60px;
+  margin-top: -90px;
+}
+
+.soap1 {
+  margin-right: 80px;
+}
+
+.info-container02, .info-container, .text-container-02, .subtitle-container {
+  display: flex;
+  align-items: center;
+}
+.info-text02, .info-text {
+  flex: 1;
+  margin-left: 60px;
+  margin-right: 50px;
+  margin-top: -50px;
+
+}
+
+.text-container-02, .subtitle-container {
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  margin-top: 260px;
+}
+
+.title-01, .why-customer-love-us {
+  color: var(--dark, #042117);
+  text-align: left;
+  font: 700 45px/139% 'Nunito', sans-serif;
+}
+
+.text-01, .lorem-ipsum {
+  color: #7d7d7d;
+  text-align: left;
+  font: 400 21px/172% 'Nunito', sans-serif;
+  margin-top: 20px;
+}
+
+
+/* Estilos Responsive Design */
+@media (max-width: 768px) {
+  .soap5, .soap1 {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .info-container02, .info-container, .text-container-02, .subtitle-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .info-text02, .info-text {
+    margin: 0;
+  }
+
+  .text-container-02, .subtitle-container {
+    align-items: center;
+  }
+}
+
+
+
+/* Bets sellers */
+.Best-sellers, .Best-sellers * {
+  box-sizing: border-box;
+  }
+  .Best-sellers {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    width: 1200px;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 1vw;
+  }
+
+.line {
+ border-style: solid;
+  border-color: #cfcfcf;
+  border-width: 1px 0 0 0;
+  flex: 1;;
+  position: relative;
+  margin-top: 4.5vw;
+ }
+
+.on-sale-products {
+ color: var(--dark, #042117);
+  text-align: left;
+  font: 700 31px/116.5% 'Lora', sans-serif;
+  position: relative;
+  margin-top: 6vw;
+ }
+
+.line-2 {
+ border-style: solid;
+  border-color: #cfcfcf;
+  border-width: 1px 0 0 0;
+  flex: 1;
+  height: 0px;
+  position: relative;
+  margin-top: 5vw;
+ }
+
+
+/* Products */
+
+.Products-container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 90%;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 15vw;
+}
+
+
+.image-4 {
+  align-self: stretch;
+  flex-shrink: 0;
+  height: auto;
+  position: relative;
+  width: 100%;
+}
+
+
+.frame-124 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.frame-40 {
+  display: flex;
+  flex-direction: row;
+  gap: 5.87px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+
+
+.ipsum-dolor-sit-amet {
+  color: var(--dark, #042117);
+  text-align: center;
+  font: 400 16px/139% 'Nunito', sans-serif;
+  position: relative;
+  width: 100%;
+}
+
+._220 {
+  color: var(--primary, #a1ab23);
+  text-align: left;
+  font: 700 20px/139% 'Nunito', sans-serif;
+  position: relative;
+}
+
+.frame-125 {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.line-1 {
+  border-style: solid;
+  border-color: #c9c9c9;
+  border-width: 1px 0 0 0;
+  flex-shrink: 0;
+  width: 32px;
+  height: 0px;
+  position: relative;
+}
+
+.frame-41 {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* Responsive desing */
+
+@media (max-width: 768px) {
+  .frame-293,
+  .frame-297 {
+    flex-direction: column;
+    gap: 16px;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .frame-42 {
+    padding: 20px;
+  }
+
+  .image-4 {
+    height: auto;
+  }
+
+  .frame-40 {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .vector {
+    max-width: 100%;
+  }
+
+  .ipsum-dolor-sit-amet {
+    width: 100%;
+  }
+
+  .frame-41 {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+/* Estilos para blogs */
+.blog-title01, .blog-title01 * {
+  box-sizing: border-box;
+  }
+.blog-title01 {
+ display: flex;
+  flex-direction: column;
+  gap: 9px;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  margin-top: 150px;
+ }
+
+.from-out-blog {
+ color: var(--sdfs, #4d7d6c);
+  text-align: center;
+  font: 700 16px/139% 'Nunito', sans-serif;
+  position: relative;
+  width: 223px;
+ }
+
+.latest-updated {
+ color: var(--dark, #042117);
+  text-align: center;
+  font: 700 32px/116.5% 'Lora', sans-serif;
+  position: relative;
+ }
+
+/* Segundo blog */
+.blog-card-panel-02, .blog-card-panel-02 * {
+  box-sizing: border-box;
+}
+
+.blog-card-panel-02 {
+  width: 340px;
+  height: 400px;
+  position: relative;
+  margin-left: 12vw;
+  margin-top: 100px;
+}
+
+.blog-rectangle-02 {
+  background: #ffffff;
+  border-radius: 5px;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+  box-shadow: 0px 4px 4px 0px rgba(192, 189, 189, 0.25);
+}
+
+.blog-title-02 {
+  color: var(--_800, #2d3748);
+  text-align: left;
+  font: 700 20px 'Nunito', sans-serif;
+  position: absolute;
+  right: 13%;
+  left: 5.33%;
+  width: 100.67%;
+  bottom: 42.15%;
+  top: 51.57%;
+  height: 6.28%;
+}
+
+.blog-date-02 {
+  color: var(--_600, #718096);
+  text-align: left;
+  font: 400 12px 'Inter-Regular', sans-serif;
+  position: absolute;
+  right: 64%;
+  left: 5.33%;
+  width: 30.67%;
+  bottom: 6.28%;
+  top: 89.79%;
+  height: 3.93%;
+}
+
+.blog-read-more-02 {
+  color: var(--_800, #2d3748);
+  text-align: left;
+  font: 700 12px 'Inter-Bold', sans-serif;
+  position: absolute;
+  right: 8%;
+  left: 71%;
+  width: 21%;
+  bottom: 6.28%;
+  top: 89.79%;
+  height: 3.93%;
+}
+
+.blog-image-02 {
+  position: absolute;
+  right: 0.33%;
+  left: 0.67%;
+  width: 99%;
+  bottom: 53.14%;
+  top: 0%;
+  height: 46.86%;
+}
+
+.blog-content-02 {
+  color: var(--_600, #718096);
+  text-align: left;
+  font: 400 14px 'Inter-Regular', sans-serif;
+  position: absolute;
+  right: 8.33%;
+  left: 5.67%;
+  width: 86%;
+  bottom: 15.97%;
+  top: 61.78%;
+  height: 22.25%;
+}
+/* Estilos Responsive Design */
+@media (max-width: 768px) {
+  .blog-card-panel {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .blog-title-02,
+  .blog-date-02,
+  .blog-read-more-02,
+  .blog-content-02 {
+    position: static;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .blog-read-more-02 {
+    right: auto;
+    left: 0;
+  }
+}
+/* Tercer blog */
+.blog-card-panel-03, .blog-card-panel-03 * {
+  box-sizing: border-box;
+}
+
+.blog-card-panel-03 {
+  width: 340px;
+  height: 400px;
+  position: relative;
+  margin-left:38vw;
+  margin-top: -400px;
+}
+
+.blog-rectangle-03 {
+  background: #ffffff;
+  border-radius: 5px;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+  box-shadow: 0px 4px 4px 0px rgba(192, 189, 189, 0.25);
+}
+
+.blog-title-03 {
+  color: var(--_800, #2d3748);
+  text-align: left;
+  font: 700 19px 'Nunito', sans-serif;
+  position: absolute;
+  right: 13%;
+  left: 5.33%;
+  width: 81.67%;
+  bottom: 42.15%;
+  top: 51.57%;
+  height: 6.28%;
+}
+
+.blog-date-03 {
+  color: var(--_600, #718096);
+  text-align: left;
+  font: 400 12px 'Inter-Regular', sans-serif;
+  position: absolute;
+  right: 64%;
+  left: 5.33%;
+  width: 30.67%;
+  bottom: 6.28%;
+  top: 89.79%;
+  height: 3.93%;
+}
+
+.blog-read-more-03 {
+  color: var(--_800, #2d3748);
+  text-align: left;
+  font: 700 12px 'Inter-Bold', sans-serif;
+  position: absolute;
+  right: 8%;
+  left: 71%;
+  width: 21%;
+  bottom: 6.28%;
+  top: 89.79%;
+  height: 3.93%;
+}
+
+.blog-content-03 {
+  color: var(--_600, #718096);
+  text-align: left;
+  font: 400 14px 'Inter-Regular', sans-serif;
+  position: absolute;
+  right: 8.33%;
+  left: 5.67%;
+  width: 86%;
+  bottom: 15.97%;
+  top: 61.78%;
+  height: 22.25%;
+}
+
+.blog-image-03 {
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 53.14%;
+  top: 0%;
+  height: 46.86%;
+}
+/* Estilos Responsive Design */
+@media (max-width: 768px) {
+  .blog-card-panel-03 {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .blog-title-03,
+  .blog-date-03,
+  .blog-read-more-03,
+  .blog-content-03 {
+    position: static;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .blog-read-more-03 {
+    right: auto;
+    left: 0;
+  }
+}
+/* Cuarto blog */
+.blog-card-panel-04, .blog-card-panel-04 * {
+  box-sizing: border-box;
+}
+
+.blog-card-panel-04 {
+  width: 340px;
+  height: 400px;
+  position: relative;
+  margin-left: 64vw;
+  margin-top: -400px;
+}
+
+.blog-rectangle-04 {
+  background: #ffffff;
+  border-radius: 5px;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+  box-shadow: 0px 4px 4px 0px rgba(192, 189, 189, 0.25);
+}
+
+.blog-title-04 {
+  color: var(--_800, #2d3748);
+  text-align: left;
+  font: 700 20px 'Nunito', sans-serif;
+  position: absolute;
+  right: 13%;
+  left: 5.33%;
+  width: 81.67%;
+  bottom: 42.15%;
+  top: 51.57%;
+  height: 6.28%;
+}
+
+.blog-date-04 {
+  color: var(--_600, #718096);
+  text-align: left;
+  font: 400 12px 'Inter-Regular', sans-serif;
+  position: absolute;
+  right: 64%;
+  left: 5.33%;
+  width: 30.67%;
+  bottom: 6.28%;
+  top: 89.79%;
+  height: 3.93%;
+}
+
+.blog-read-more-04 {
+  color: var(--_800, #2d3748);
+  text-align: left;
+  font: 700 12px 'Inter-Bold', sans-serif;
+  position: absolute;
+  right: 8%;
+  left: 71%;
+  width: 21%;
+  bottom: 6.28%;
+  top: 89.79%;
+  height: 3.93%;
+}
+
+.blog-content-04{
+  color: var(--_600, #718096);
+  text-align: left;
+  font: 400 14px 'Inter-Regular', sans-serif;
+  position: absolute;
+  right: 8.33%;
+  left: 5.67%;
+  width: 86%;
+  bottom: 15.97%;
+  top: 61.78%;
+  height: 22.25%;
+}
+
+.blog-image-04 {
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 53.14%;
+  top: 0%;
+  height: 46.86%;
+}
+/* Estilos Responsive Design */
+@media (max-width: 768px) {
+  .blog-card-panel-04 {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .blog-title-04,
+  .blog-date-04,
+  .blog-read-more-04,
+  .blog-content-04 {
+    position: static;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .blog-read-more-04 {
+    right: auto;
+    left: 0;
+  }
+}
+   /* Sesion Testimonios */
+.testimonials-section, .testimonials-section * {
+  box-sizing: border-box;
+}
+
+.testimonials-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  width: 100%;
+  margin-top: 75px;
+  margin-bottom: 100px;
+}
+
+.text-container {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.heading {
+  color: var(--grey-15, #262626);
+  text-align: center;
+  font: 700 45px/150% 'Nunito', sans-serif;
+margin-bottom: 12px;
+}
+
+.paragraph {
+  color: var(--grey-20, #333333);
+  text-align: center;
+  font: 500 22px/150% 'Urbanist', sans-serif;
+  margin-bottom: 60px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.items-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: var(--green-97, #fafdf2);
+  border-radius: 10px;
+  border: 1px solid var(--green-90, #eef8d3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.container2 {
+  border-radius: 16px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.icon, .icon2, .icon3 {
+  flex-shrink: 0;
+  overflow: visible;
+}
+
+.paragraph2 {
+  color: var(--grey-20, #333333);
+  text-align: left;
+  font: 500 18px/150% 'Urbanist', sans-serif;
+}
+
+.container3 {
+  background: var(--green-95, #f6fbe9);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+
+
+.name {
+  color: var(--dark-green-15, #0a472e);
+  text-align: left;
+  font: 600 20px/150% 'Urbanist', sans-serif;
+  flex: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .text-container {
+    padding: 0 250px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container2 {
+    padding: 10px;
+  }
+}
+
+/* Estilos para el news letter */
+
+/* Estilos para la sección de llamada a la acción */
+.call-to-action, .call-to-action * {
+  box-sizing: border-box;
+}
+
+.call-to-action {
+  background: #fbfbfb;
+  padding: 45px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  max-width: 80%;
+  height: 250px;
+  position: relative;
+  box-shadow: 0px 8px 16px 0px rgba(96, 97, 112, 0.16), 0px 2px 4px 0px rgba(40, 41, 61, 0.04);
+  overflow: hidden;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 22px;
+  margin-bottom: -50px;
+}
+
+.call-to-action-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+
+}
+
+/* Estilos para el contenido de la newsletter */
+.newsletter-heading, .newsletter-description {
+  color: #000000;
+  text-align: center;
+
+}
+
+.newsletter-heading {
+  font: 700 36px/56px 'Nunito', sans-serif;
+}
+
+.newsletter-description {
+  font: 400 19px/28px 'Inter-Bold', sans-serif;
+  margin-bottom: 10px;
+}
+
+
+/* Estilos para el formulario de suscripción */
+.subscription-form {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 60%;
+  position: relative;
+   border-color: var(--gray-scale-gray-100, #e6e6e6);
+}
+
+.input-wrapper {
+
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 60%;
+  height: 100%;
+  position: relative;
+
+}
+
+.email-input {
+  color: var(--gray-scale-gray-500, #808080);
+  text-align: left;
+  font: 400 14px/24px 'Roboto-Regular', sans-serif;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  width: 99%;
+  height: 83%;
+  border-radius: 15px;
+  border-color: var(--gray-scale-gray-100, #e6e6e6);
+}
+
+
+/* Estilos para el botón de suscripción */
+.subscribe-button {
+  background: #00b207;
+  padding: 8px 44px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 40px;
+}
+
+.cta {
+  color: #f9f4f4;
+  text-align: center;
+  font: 400 20px/28px 'SourceSansPro-Regular', sans-serif;
+  position: relative;
+
+}
+
+/* Estilos Responsive Design */
+@media (max-width: 768px) {
+  .call-to-action {
+    padding: 45px 10px; /* Ajustado el relleno para dispositivos más pequeños */
+  }
+
+  .subscription-form {
+    width: 100%;
+    max-width: none; /* Eliminado el máximo ancho para ocupar todo el ancho disponible */
+  }
+
+  .subscribe-button {
+    padding: 8px 10px; /* Ajustado el relleno para dispositivos más pequeños */
+  }
+}
+
+/* Estilos del footer .footer */
+#miFooter {
+  background-color: #0a472e;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 10px;
+  clear: both;
+  margin-top: 100px;
+}
