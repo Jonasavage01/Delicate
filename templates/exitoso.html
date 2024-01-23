@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descripción de tu página web">
+    <meta name="keywords" content="Palabras clave, separadas por comas">
+    <meta name="author" content="Jonas Javier Encarnacion">
+    <link rel="stylesheet" href="{{ url_for('static', filename='exitoso.css') }}">
+    <title>Delicaté</title>
+    <link rel="icon" href="logo-2.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <main>
+        <div class="login">
+            <div class="registro-exitoso">
+                ¡Registro Exitoso!
+            </div>
+            <div class="don-t-have-account">
+                <div class="gracias-por-registrarte-en-nuestro-sitio-ya-puedes-iniciar-sesi-n">
+                    Gracias por registrarte en nuestro sitio. Ya puedes iniciar sesión
+                </div>
+            </div>
+            <div class="button">
+                <a href="{{ url_for('login_after_success') }}" class="normal">Iniciar sesión</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

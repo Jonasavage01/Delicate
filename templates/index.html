@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descripción de tu página web">
+    <meta name="keywords" content="Palabras clave, separadas por comas">
+    <meta name="author" content="Jonas Javier Encarnacion">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/index/styles.css">
+    <title>Delicaté</title>
+     <link rel="icon" href="/static/index/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+     <!-- linea -->
+     <header>
+        <div class="header">
+
+        </div>
+
+    <!-- barra de busqueda -->
+  <div class="midle">
+    <div class="search">
+        <div class="searech">
+            <div class="search2">
+                <svg class="group-01" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                    <path d="M8.16667 14.3333C11.8486 14.3333 14.8333 11.3486 14.8333 7.66667C14.8333 3.98477 11.8486 1 8.16667 1C4.48477 1 1.5 3.98477 1.5 7.66667C1.5 11.3486 4.48477 14.3333 8.16667 14.3333Z" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16.4999 16L12.8749 12.375" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+
+            <input type="text" class="search3" placeholder="Search...">
+        </div>
+        <div class="button">
+            <button type="button" class="search-button">
+                Search
+            </button>
+        </div>
+    </div>
+</div>
+        </div>
+        <div class="icons">
+            <div class="devider"></div>
+            <div class="shopping-card">
+                <div class="cart">
+                    <svg class="bag" viewBox="0 0 34 34" width="34" height="34"><path d="M12,12A6,6,0,1,0,6,6,6.006,6.006,0,0,0,12,12ZM12,2A4,4,0,1,1,8,6,4,4,0,0,1,12,2Z"/><path d="M12,14a9.01,9.01,0,0,0-9,9,1,1,0,0,0,2,0,7,7,0,0,1,14,0,1,1,0,0,0,2,0A9.01,9.01,0,0,0,12,14Z"/>
+                    </svg>
+
+                </div>
+
+                <div class="shopping-cart">
+                    {% if login_link == url_for('profile') %}
+                    <a href="{{ url_for('login2') }}" class="shopping-cart-link">Mi perfil</a>
+                    {% else %}
+                    <a href="{{ url_for('login2') }}" class="shopping-cart-link">Iniciar sesión</a>
+                    {% endif %}
+                </div>
+            </div>
+
+        </div>
+        <img class="logo" src="static/index/logo.png" />
+    </div>
+
+      <!-- Menu de navegación links -->
+<nav>
+        <div class="main-container">
+          <div class="navigation">
+            <div class="navigation-container">
+              <div class="icons-container">
+                <div class="home-container">
+                    <a href="{{ url_for('home') }}" class="home">Home</a>
+                </div>
+                <div class="shop-container">
+                    <a href="{{ url_for('shop') }}" class="shop">Tienda</a>
+                </div>
+                <div class="blog-conteiner">
+                    <a href="{{ url_for('blog') }}" class="blog">Blog</a>
+                </div>
+                <div class="contact-conteiner">
+                    <a href="{{ url_for('Contact') }}" class="blog">Contacto</a>
+                </div>
+                <div class="about-Us-conteiner">
+                    <a href="{{ url_for('Aboutus') }}" class="blog">Sobre nosotros</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Phone -->
+          <div class="contact-info">
+            <div class="phone-icon">
+              <svg class="phone-icon-svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+                <path d="M14.4359 2.375C15.9193 2.77396 17.2718 3.55567 18.358 4.64184C19.4441 5.72801 20.2258 7.08051 20.6248 8.56388" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.5306 5.75684C14.4205 5.99622 15.2318 6.46518 15.8833 7.11675C16.5349 7.76832 17.0039 8.57964 17.2433 9.46946" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7.115 11.6522C8.02238 13.5078 9.5263 15.0053 11.3859 15.9047C11.522 15.9692 11.6727 15.997 11.8229 15.9855C11.9731 15.974 12.1178 15.9235 12.2425 15.839L14.9812 14.0138C15.1022 13.933 15.2414 13.8837 15.3862 13.8702C15.5311 13.8568 15.677 13.8797 15.8107 13.9368L20.9339 16.133C21.1079 16.207 21.2532 16.3354 21.3479 16.4991C21.4426 16.6627 21.4815 16.8527 21.4589 17.0404C21.2967 18.3074 20.6784 19.4718 19.7196 20.3158C18.7608 21.1597 17.5273 21.6253 16.25 21.6254C12.3049 21.6254 8.52139 20.0582 5.73179 17.2686C2.94218 14.479 1.375 10.6955 1.375 6.75041C1.37512 5.4732 1.84074 4.23982 2.68471 3.28118C3.52867 2.32254 4.6931 1.70437 5.96 1.54241C6.14771 1.51977 6.33769 1.55873 6.50134 1.65342C6.66499 1.7481 6.79345 1.89339 6.86738 2.06741L9.06537 7.19491C9.1219 7.32739 9.14485 7.47178 9.13218 7.61527C9.11951 7.75875 9.07162 7.89688 8.99275 8.01741L7.17275 10.7982C7.09015 10.9234 7.04141 11.0679 7.03129 11.2175C7.02117 11.3672 7.05001 11.517 7.115 11.6522V11.6522Z" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+            </div>
+            <div class="phone-number">
+              (849) 862-5049
+            </div>
+          </div>
+        </div>
+      </nav>
+      </header>
+
+
+  <!--banner  -->
+<div class="breadcrumbs" style="background: url(breadcrumbs.png) center; background-size: cover;">
+        <div class="location" >
+                  <div class="home-1-1" >
+                            <svg class="group-02" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns=>
+                                      <path d="M1 8L9 1L17 8V18H12V14C12 13.2044 11.6839 12.4413 11.1213 11.8787C10.5587 11.3161 9.79565 11 9 11C8.20435 11 7.44129 11.3161 6.87868 11.8787C6.31607 12.4413 6 13.2044 6 14V18H1V8Z" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                  </div>
+                  <svg class="group2" width="6" height="10" viewBox="0 0 6 10" fill="none" >
+                            <path d="M1 0.916341L5.08333 4.99967L1 9.08301" stroke="#808080" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <div class="vegetables" >
+Home </div>
+        </div>
+</div>
+
+<img class="banner" src="static/index/banner.png" alt="Imagen 1">
+
+<main>
+    <!-- Main images -->
+<section class="main-images">
+    <div class="image-container">
+        <!-- Imagen 1 -->
+        <img class="main-image-1" src="static/index/generate1.jpg" alt="Imagen 1">
+
+        <!-- Imagen 2 -->
+        <img class="main-image-2" src="static/index/generate8.jpg" alt="Imagen 2">
+    </div>
+
+    <!-- Texto-1 -->
+    <div class="banner-text">
+        <h1 class="healthy-days">Vive saludable</h1>
+        <h2 class="organic-soaps">Jabones orgánicos</h2>
+
+        <!-- Botón Buy now -->
+        <div class="Button">
+            <a href="Shop/shop.html" class="learn-more">Tienda</a>
+          <img src="static/index/carrito.png" alt="Shopping Cart" class="shopping-cart-icon">
+      </a>
+  </div>
+
+         <!-- Flecha decorativa -->
+        </div>
+        <svg class="vector" width="4" height="7" viewBox="0 0 4 7" fill="none">
+            <path d="M3.83264 3.90349C4.05581 3.68032 4.05581 3.3179 3.83264 3.09473L0.976125 0.238218C0.75296 0.0150533 0.390539 0.0150533 0.167374 0.238218C-0.0557913 0.461384 -0.0557913 0.823804 0.167374 1.04697L2.62041 3.5L0.169159 5.95304C-0.0540062 6.1762 -0.0540062 6.53862 0.169159 6.76179C0.392324 6.98495 0.754745 6.98495 0.97791 6.76179L3.83443 3.90527L3.83264 3.90349Z" fill="white"/>
+        </svg>
+    </div>
+</section>
+<!-- Beneficios -->
+<section>
+        <div class="Benefits-setion">
+          <div class="feature">
+            <svg class="delivery-truck-1" width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <!-- SVG Path para envío gratuito -->
+                <path d="M35.4905 0.538949C35.4372 0.343152 35.3046 0.178413 35.1246 0.0846357C34.7694 -0.103321 34.329 0.032269 34.141 0.387478C34.1405 0.388382 34.14 0.389287 34.1396 0.390192C34.1396 0.410294 30.4528 7.56272 19.1352 8.80906C17.6589 8.96657 16.2158 9.35173 14.8574 9.95088C12.4259 11.008 10.4178 12.8477 9.15233 15.1775C7.97092 17.3659 7.48162 19.8614 7.74919 22.3339C7.94629 24.1363 8.54826 25.8709 9.51015 27.4078C7.49992 28.8511 1.12345 33.8405 0.548517 39.1958C0.506302 39.5954 0.796178 39.9537 1.19581 39.9959C1.59555 40.0381 1.95367 39.7482 1.99589 39.3486C2.52257 34.5682 8.50504 29.9326 10.3705 28.5898C12.6099 31.3398 15.963 32.8917 19.5613 33.145C21.9832 33.3013 24.4079 32.8883 26.6414 31.9389C29.0659 30.9216 31.2072 29.3308 32.8812 27.3032C37.1951 22.0766 39.2496 13.2919 35.4905 0.538949ZM10.7887 26.6881C10.5113 26.2512 10.2667 25.7943 10.0569 25.3211C9.61549 24.3228 9.33074 23.2624 9.21264 22.1771C8.96638 19.9995 9.38693 17.7984 10.4188 15.865C11.5341 13.8152 13.3032 12.1975 15.4444 11.2696C16.6685 10.7366 17.9677 10.3962 19.296 10.2605C26.766 9.45636 31.1604 6.13143 33.428 3.71914C32.0957 8.10538 29.8019 12.1393 26.7138 15.5273L26.2715 11.0726C26.249 10.6713 25.9054 10.3643 25.5042 10.3868C25.103 10.4093 24.7959 10.7529 24.8184 11.1541C24.8195 11.1739 24.8214 11.1937 24.8241 11.2133L25.391 16.9385C22.0098 20.3679 17.3099 23.8135 10.7887 26.6881ZM31.7554 26.3705V26.3745C30.2345 28.2262 28.2863 29.6806 26.0785 30.6121C24.0483 31.4701 21.8448 31.8391 19.6458 31.6896C16.5845 31.5345 13.7118 30.1639 11.6651 27.8822C14.0635 26.8209 16.3826 25.5888 18.6045 24.1954L24.993 25.4016C25.39 25.4638 25.7623 25.1923 25.8245 24.7953C25.8845 24.4123 25.6338 24.0495 25.2543 23.9703L20.3453 23.0415C22.612 21.4848 24.7219 19.7115 26.6454 17.7466C26.6807 17.7162 26.713 17.6826 26.7419 17.6461C31.8157 12.3632 33.9747 7.13655 34.8753 3.92017C37.36 14.5181 35.4583 21.8917 31.7554 26.3705Z" fill="#00B307"/>
+            </svg>
+            <div class="info">
+              <div class="free-shipping">100% orgánicos</div>
+              <div class="free-shipping-on-all-your-order">"Tu piel merece lo mejor"</div>
+            </div>
+          </div>
+
+          <div class="feature">
+            <div class="headphones-1">
+              <svg class="group-19" width="38" height="40" viewBox="0 0 38 40" fill="none">
+                <!-- SVG Path para servicio al cliente 24/7 -->
+                <path d="M32.6848 15.2101V13.6723C32.6848 9.9916 31.3822 6.57143 29.0209 4.03361C26.6007 1.42857 23.273 0 19.6427 0H18.3738C14.7436 0 11.4159 1.42857 8.99569 4.03361C6.63434 6.57143 5.33182 9.9916 5.33182 13.6723V15.2101C2.46628 15.4034 0.188965 17.7899 0.188965 20.7059V23.1092C0.188965 26.1429 2.65955 28.6134 5.69317 28.6134H8.79401C9.34863 28.6134 9.80241 28.1597 9.80241 27.605V16.2017C9.80241 15.6471 9.34863 15.1933 8.79401 15.1933H7.34863V13.6723C7.34863 7.02521 12.0881 2.01681 18.3654 2.01681H19.6343C25.9201 2.01681 30.6512 7.02521 30.6512 13.6723V15.1933H29.2058C28.6512 15.1933 28.1974 15.6471 28.1974 16.2017V27.5966C28.1974 28.1513 28.6512 28.605 29.2058 28.605H30.6175C30.2058 33.8655 26.5839 35.084 24.9033 35.3613C24.4411 33.9412 23.1049 32.916 21.5335 32.916H19.0125C17.0629 32.916 15.4747 34.5042 15.4747 36.4538C15.4747 38.4034 17.0629 40 19.0125 40H21.5419C23.1722 40 24.5419 38.8908 24.9537 37.395C25.7772 37.2773 27.0797 36.9832 28.3738 36.2269C30.1974 35.1597 32.357 32.9832 32.6427 28.5966C35.5251 28.4202 37.8108 26.0252 37.8108 23.1008V20.6975C37.8192 17.7899 35.5503 15.395 32.6848 15.2101ZM7.80241 26.5882H5.70997C3.7856 26.5882 2.22258 25.0252 2.22258 23.1008V20.6975C2.22258 18.7731 3.7856 17.2101 5.70997 17.2101H7.80241V26.5882ZM21.5419 37.9832H19.0125C18.1722 37.9832 17.4915 37.3025 17.4915 36.4622C17.4915 35.6218 18.1722 34.9412 19.0125 34.9412H21.5419C22.3822 34.9412 23.0629 35.6218 23.0629 36.4622C23.0629 37.3025 22.3822 37.9832 21.5419 37.9832ZM35.8024 23.1008C35.8024 25.0252 34.2394 26.5882 32.315 26.5882H30.2226V17.2101H32.315C34.2394 17.2101 35.8024 18.7731 35.8024 20.6975V23.1008Z" fill="#00B307"/>
+              </svg>
+            </div>
+            <div class="info-01">
+              <div class="customer-support-24-7">Atención al Cliente 24/7</div>
+              <div class="instant-access-to-support">"Soporte inmediato en todo momento"</div>
+            </div>
+          </div>
+
+          <div class="feature">
+            <div class="shopping-bag">
+              <svg class="group-20" width="32" height="40" viewBox="0 0 32 40" fill="none">
+                <!-- SVG Path para pago seguro -->
+                <path d="M31.9803 34.6678L29.6785 8.72697C29.6371 8.21362 29.2065 7.82447 28.6849 7.82447H23.8329C23.8246 3.51066 20.314 0 16.0001 0C11.6863 0 8.17568 3.51066 8.1674 7.82447H3.3154C2.80205 7.82447 2.3715 8.21362 2.32182 8.72697L0.0200195 34.6678C0.0200195 34.7009 0.0200195 34.7257 0.0200195 34.7589C0.0200195 37.6485 2.67785 40 5.94012 40H26.0602C29.3224 40 31.9803 37.6485 31.9803 34.7589C31.9803 34.7257 31.9803 34.7009 31.9803 34.6678ZM16.0001 1.98717C19.221 1.98717 21.8375 4.6036 21.8457 7.82447H10.1546C10.1628 4.6036 12.7793 1.98717 16.0001 1.98717ZM26.0602 38.0046H5.94012C3.78736 38.0046 2.03203 36.5721 2.00719 34.792L4.22619 9.81163H8.1674V13.2975C8.1674 13.8439 8.61451 14.291 9.16098 14.291C9.70746 14.291 10.1546 13.8439 10.1546 13.2975V9.81163H21.8457V13.2975C21.8457 13.8439 22.2928 14.291 22.8393 14.291C23.3858 14.291 23.8329 13.8439 23.8329 13.2975V9.81163H27.7741L29.9931 34.8002C29.9683 36.5721 28.2129 38.0046 26.0602 38.0046Z" fill="#00B307"/>
+                <path d="M20.1317 20.6831L14.2696 26.5453L11.8767 24.1524C11.4875 23.7632 10.8583 23.7632 10.4691 24.1524C10.08 24.5415 10.08 25.1708 10.4691 25.56L13.5658 28.6566C13.7562 28.8471 14.0129 28.9464 14.2696 28.9464C14.5262 28.9464 14.7746 28.8471 14.9733 28.6566L21.5393 22.0907C21.9284 21.7015 21.9284 21.0723 21.5393 20.6831C21.1501 20.3022 20.5208 20.3022 20.1317 20.6831Z" fill="#00B307"/>
+              </svg>
+            </div>
+            <div class="info-01">
+              <div class="_100-secure-payment">100% pago seguro</div>
+              <div class="we-ensure-your-money-is-save">"Tu seguridad financiera es nuestra prioridad"</div>
+            </div>
+          </div>
+
+          <div class="feature">
+            <div class="package">
+              <svg class="21" width="40" height="42" viewBox="0 0 38 40" fill="none">
+                <path d="M31.1384 17.3704C30.9781 16.8758 30.5586 16.5221 30.0439 16.4474L23.9436 15.5609L21.2156 10.0337C20.9859 9.56711 20.52 9.27734 19.9999 9.27734C19.4798 9.27734 19.0139 9.56711 18.7843 10.0332L16.056 15.5609L9.95566 16.4474C9.44137 16.5221 9.02199 16.8755 8.86113 17.3702C8.70082 17.8641 8.83215 18.3965 9.20426 18.7598L13.6187 23.0625L12.5766 29.138C12.4886 29.6503 12.695 30.1584 13.1157 30.4641C13.3533 30.637 13.6314 30.7248 13.9114 30.7247C14.1268 30.7247 14.3434 30.6727 14.5435 30.5675L19.9999 27.6989L25.4559 30.5676C25.6496 30.6693 25.8677 30.7231 26.0865 30.7231C26.375 30.7231 26.6505 30.6336 26.8837 30.4641C27.3036 30.1587 27.5104 29.6509 27.4228 29.1384L27.0106 26.7347C26.9515 26.3909 26.6247 26.1599 26.2813 26.2189C25.9375 26.2779 25.7066 26.6045 25.7656 26.9482L26.1778 29.3515C26.1836 29.3862 26.1691 29.422 26.1409 29.4424C26.099 29.473 26.0686 29.4627 26.0434 29.4494L20.2934 26.4264C20.1095 26.3298 19.8898 26.3297 19.7056 26.4264L13.955 29.4495C13.9243 29.4657 13.8861 29.4629 13.8579 29.4424C13.8293 29.4216 13.8151 29.387 13.8211 29.3519L14.9194 22.9488C14.9546 22.7438 14.8868 22.5348 14.7379 22.3898L10.0859 17.8555C10.0607 17.8309 10.0514 17.7936 10.0621 17.7606C10.0729 17.7273 10.1023 17.7024 10.1369 17.6974L16.5659 16.7632C16.7717 16.7333 16.9495 16.6041 17.0415 16.4177L19.9169 10.5918C19.9482 10.5284 20.0509 10.5279 20.0825 10.5921L22.9578 16.4177C23.0497 16.6041 23.2276 16.7333 23.4333 16.7632L29.8624 17.6974C29.8969 17.7025 29.9261 17.727 29.9371 17.7609C29.9479 17.7939 29.9386 17.831 29.9136 17.8553L25.2615 22.3898C25.1127 22.5348 25.0447 22.744 25.08 22.9488L25.427 24.9719C25.4858 25.3156 25.8125 25.5466 26.1561 25.4876C26.5 25.4286 26.7309 25.102 26.6718 24.7583L26.381 23.0625L30.7954 18.7595C31.1678 18.3964 31.2991 17.8639 31.1384 17.3704Z" fill="#00B307" stroke="#00B307" stroke-width="0.3"/>
+                <path d="M3.63141 19.3682H0.631562C0.282734 19.3682 0 19.6509 0 19.9997C0 20.3485 0.282734 20.6313 0.631562 20.6313H3.63141C3.98031 20.6313 4.26297 20.3485 4.26297 19.9997C4.26297 19.6509 3.98023 19.3682 3.63141 19.3682Z" fill="#00B307" stroke="#00B307" stroke-width="0.3"/>
+                <path d="M39.3682 19.3682H36.3684C36.0195 19.3682 35.7368 19.651 35.7368 19.9997C35.7368 20.3485 36.0195 20.6313 36.3684 20.6313H39.3682C39.7171 20.6313 39.9997 20.3485 39.9997 19.9997C39.9997 19.6509 39.7171 19.3682 39.3682 19.3682Z" fill="#00B307" stroke="#00B307" stroke-width="0.3"/>
+                <path d="M7.97907 31.1274L5.8579 33.2485C5.61118 33.495 5.61118 33.895 5.85782 34.1416C5.98118 34.265 6.14282 34.3266 6.30446 34.3266C6.46603 34.3266 6.62774 34.265 6.75095 34.1417L8.87212 32.0205C9.11884 31.7739 9.11884 31.374 8.8722 31.1274C8.62556 30.8807 8.22563 30.8807 7.97907 31.1274Z" fill="#00B307" stroke="#00B307" stroke-width="0.3"/>
+                <path d="M33.2487 5.85694L31.1274 7.97804C30.8807 8.22468 30.8807 8.6246 31.1274 8.87124C31.2507 8.9946 31.4123 9.05624 31.574 9.05624C31.7356 9.05624 31.8973 8.9946 32.0205 8.87116L34.1417 6.75007C34.3884 6.50351 34.3884 6.10358 34.1418 5.85694C33.8951 5.61022 33.4952 5.61015 33.2487 5.85694Z" fill="#00B307" stroke="#00B307" stroke-width="0.3"/>
+                <path d="M20.0002 35.7373C19.6513 35.7373 19.3687 36.0201 19.3687 36.3689V39.3686C19.3687 39.7175 19.6514 40.0002 20.0002 40.0002C20.3491 40.0002 20.6318 39.7174 20.6318 39.3686V36.3689C20.6318 36.02 20.3491 35.7373 20.0002 35.7373Z" fill="#00B307" stroke="#00B307" stroke-width="0.3"/>
+                <path d="M20.0002 4.26297C20.3491 4.26297 20.6318 3.98016 20.6318 3.63141V0.631562C20.6318 0.282734 20.349 0 20.0002 0C19.6513 0 19.3687 0.282812 19.3687 0.631562V3.63141C19.3687 3.98023 19.6513 4.26297 20.0002 4.26297Z" fill="#00B307" stroke="#00B307" stroke-width="0.3"/>
+                <path d="M32.0205 31.1274C31.774 30.8807 31.3741 30.8807 31.1274 31.1274C30.8807 31.3739 30.8807 31.7739 31.1274 32.0205L33.2487 34.1417C33.3719 34.265 33.5337 34.3267 33.6952 34.3267C33.8568 34.3267 34.0185 34.265 34.1418 34.1416C34.3884 33.895 34.3884 33.4951 34.1417 33.2485L32.0205 31.1274Z" fill="#00B307" stroke="#00B307" stroke-width="0.3"/>
+                <path d="M7.979 8.87214C8.10236 8.9955 8.264 9.05714 8.42564 9.05714C8.5872 9.05714 8.74892 8.9955 8.8722 8.87229C9.11884 8.62565 9.11884 8.22573 8.8722 7.97909L6.75103 5.85783C6.50447 5.61119 6.10463 5.61119 5.85783 5.85783C5.61119 6.1044 5.61119 6.50432 5.85783 6.75096L7.979 8.87214Z" fill="#00B307" stroke="#00B307" stroke-width="0.3"/>
+                </svg>
+            </div>
+            <div class="info-01">
+              <div class="money-back-guarantee">Experiencia sensorial única</div>
+              <div class="_30-days-money-back-guarantee">"Aromas y texturas que cautivan tus sentidos"</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Sección de Información -->
+    <section class="about-us">
+        <div class="about-us-content">
+            <div class="image-and-text">
+                <img class="image-2" src="static/index/Jabones.png" alt="Jabones">
+                <div class="text-container01">
+                    <h2 class="about-us-heading">Un poco sobre nosotros</h2>
+                    <p class="shop-description">Una tienda para personas que realmente valoran la salud</p>
+                    <p class="buy-products-description">
+                        Explora nuestra tienda y descubre una gama de productos naturales, sostenibles y libres de químicos. Cada artículo es meticulosamente creado por talentosos artesanos locales, reflejando nuestro compromiso con la salud y la calidad. Nos enorgullece ser pioneros en República Dominicana, liderando el camino hacia un estilo de vida más natural y consciente. ¡Bienvenido a nuestra familia, donde tu salud realmente importa!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+   <!-- Best sellers -->
+   <section>
+        <div class="Best-sellers" >
+              <div class="line" >
+              </div>
+              <div> <h3 class="on-sale-products">Algunos de nuestros productos</h3></div>
+              <div class="line-2" >
+              </div>
+        </div>
+        </section>
+        <!-- Products -->
+    <div class="Products-container">
+        <div class="Image-container05">
+            <img class="image-4" src="static/index/Jabon-1.png" />
+            <div class="frame-42">
+                <div class="frame-124">
+                    <div class="frame-40">
+                        <svg class="vector" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M11.33 4.71558H7.14884L5.8525 0.522461L4.55616 4.71558H0.375L3.75279 7.30323L2.47471 11.4775L5.8525 8.88981L9.23029 11.4775L7.93395 7.28434L11.33 4.71558Z" fill="#FFCE31"/>
+                        </svg>
+                        <svg class="vector3" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M11.1537 4.71558H6.97257L5.67623 0.522461L4.37989 4.71558H0.19873L3.57652 7.30323L2.29844 11.4775L5.67623 8.88981L9.05402 11.4775L7.75768 7.28434L11.1537 4.71558Z" fill="#FFCE31"/>
+                        </svg>
+                        <svg class="vector5" width="11" height="12" viewBox="0 0 11 12" fill="none">
+                            <path d="M10.9775 4.71558H6.7963L5.49996 0.522461L4.20362 4.71558H0.0224609L3.40025 7.30323L2.12217 11.4775L5.49996 8.88981L8.87775 11.4775L7.58141 7.28434L10.9775 4.71558Z" fill="#FFCE31"/>
+                        </svg>
+                        <svg class="vector7" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M11.8012 4.71558H7.62003L6.32369 0.522461L5.02735 4.71558H0.846191L4.22398 7.30323L2.9459 11.4775L6.32369 8.88981L9.70148 11.4775L8.40514 7.28434L11.8012 4.71558Z" fill="#FFCE31"/>
+                        </svg>
+                        <svg class="vector9" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M11.6249 4.71558H7.44376L6.14742 0.522461L4.85108 4.71558H0.669922L4.04771 7.30323L2.76963 11.4775L6.14742 8.88981L9.52521 11.4775L8.22887 7.28434L11.6249 4.71558Z" fill="#FFCE31"/>
+                        </svg>
+                    </div>
+                    <div class="ipsum-dolor-sit-amet">Caléndula y Manzanilla</div>
+                    <div class="_220">$ 23.4</div>
+                </div>
+                <div class="frame-125">
+                    <div class="line-1"></div>
+                    <div class="frame-41">
+                        <a href="{{ url_for('product_1') }}" class="add-to-cart">IR AHORA</a>
+
+                        <svg class="vector11" width="10" height="8" viewBox="0 0 10 8" fill="none">
+                            <path d="M5.00552 4.35997L1.94617 7.41931C1.73472 7.63077 1.39279 7.63077 1.18358 7.41931L0.675193 6.91092C0.463738 6.69947 0.463738 6.35754 0.675193 6.14834L2.84373 3.9798L0.675193 1.81127C0.463738 1.59981 0.463738 1.25788 0.675193 1.04868L1.18133 0.535788C1.39279 0.324334 1.73472 0.324334 1.94392 0.535788L5.00327 3.59513C5.21697 3.80659 5.21697 4.14852 5.00552 4.35997ZM9.32459 3.59513L6.26525 0.535788C6.05379 0.324334 5.71186 0.324334 5.50266 0.535788L4.99427 1.04418C4.78281 1.25563 4.78281 1.59756 4.99427 1.80677L7.1628 3.9753L4.99427 6.14384C4.78281 6.35529 4.78281 6.69722 4.99427 6.90642L5.50266 7.41482C5.71411 7.62627 6.05604 7.62627 6.26525 7.41482L9.32459 4.35547C9.53605 4.14851 9.53605 3.80659 9.32459 3.59513Z" fill="#042117"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="frame-215">
+            <img class="image-4" src="static/index/Jabon-3.png" />
+            <div class="frame-42">
+                <div class="frame-124">
+                    <div class="frame-40">
+                        <svg class="vector12" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M11.33 4.71558H7.14884L5.8525 0.522461L4.55616 4.71558H0.375L3.75279 7.30323L2.47471 11.4775L5.8525 8.88981L9.23029 11.4775L7.93395 7.28434L11.33 4.71558Z" fill="#FFCE31"/>
+                        </svg>
+                        <svg class="vector14" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M11.1537 4.71558H6.97257L5.67623 0.522461L4.37989 4.71558H0.19873L3.57652 7.30323L2.29844 11.4775L5.67623 8.88981L9.05402 11.4775L7.75768 7.28434L11.1537 4.71558Z" fill="#FFCE31"/>
+                        </svg>
+                        <svg class="vector16" width="11" height="12" viewBox="0 0 11 12" fill="none">
+                            <path d="M10.9775 4.71558H6.7963L5.49996 0.522461L4.20362 4.71558H0.0224609L3.40025 7.30323L2.12217 11.4775L5.49996 8.88981L8.87775 11.4775L7.58141 7.28434L10.9775 4.71558Z" fill="#FFCE31"/>
+                        </svg>
+                        <svg class="vector18" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M11.8012 4.71558H7.62003L6.32369 0.522461L5.02735 4.71558H0.846191L4.22398 7.30323L2.9459 11.4775L6.32369 8.88981L9.70148 11.4775L8.40514 7.28434L11.8012 4.71558Z" fill="#FFCE31"/>
+                        </svg>
+                        <svg class="vector20" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M11.6249 4.71558H7.44376L6.14742 0.522461L4.85108 4.71558H0.669922L4.04771 7.30323L2.76963 11.4775L6.14742 8.88981L9.52521 11.4775L8.22887 7.28434L11.6249 4.71558Z" fill="#FFCE31"/>
+                        </svg>
+                    </div>
+                    <div class="ipsum-dolor-sit-amet">Almendra y coco</div>
+                    <div class="_220">$ 23.4</div>
+                </div>
+                <div class="frame-125">
+                    <div class="line-1"></div>
+                    <div class="frame-41">
+                        <a href="{{ url_for('product_2') }}" class="add-to-cart">IR AHORA</a>
+
+                        <svg class="vector22" width="10" height="8" viewBox="0 0 10 8" fill="none">
+                            <path d="M5.00552 4.35997L1.94617 7.41931C1.73472 7.63077 1.39279 7.63077 1.18358 7.41931L0.675193 6.91092C0.463738 6.69947 0.463738 6.35754 0.675193 6.14834L2.84373 3.9798L0.675193 1.81127C0.463738 1.59981 0.463738 1.25788 0.675193 1.04868L1.18133 0.535788C1.39279 0.324334 1.73472 0.324334 1.94392 0.535788L5.00327 3.59513C5.21697 3.80659 5.21697 4.14852 5.00552 4.35997ZM9.32459 3.59513L6.26525 0.535788C6.05379 0.324334 5.71186 0.324334 5.50266 0.535788L4.99427 1.04418C4.78281 1.25563 4.78281 1.59756 4.99427 1.80677L7.1628 3.9753L4.99427 6.14384C4.78281 6.35529 4.78281 6.69722 4.99427 6.90642L5.50266 7.41482C5.71411 7.62627 6.05604 7.62627 6.26525 7.41482L9.32459 4.35547C9.53605 4.14851 9.53605 3.80659 9.32459 3.59513Z" fill="#042117"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="frame-213">
+            <img class="image-4" src="static/index/Jabon-4.png" />
+            <div class="frame-42">
+                <div class="frame-124">
+                    <div class="frame-40">
+                        <svg class="vector23" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M11.33 4.71558H7.14884L5.8525 0.522461L4.55616 4.71558H0.375L3.75279 7.30323L2.47471 11.4775L5.8525 8.88981L9.23029 11.4775L7.93395 7.28434L11.33 4.71558Z" fill="#FFCE31"/>
+                        </svg>
+                        <svg class="vector25" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M11.1537 4.71558H6.97257L5.67623 0.522461L4.37989 4.71558H0.19873L3.57652 7.30323L2.29844 11.4775L5.67623 8.88981L9.05402 11.4775L7.75768 7.28434L11.1537 4.71558Z" fill="#FFCE31"/>
+                        </svg>
+                        <svg class="vector27" width="11" height="12" viewBox="0 0 11 12" fill="none">
+                            <path d="M10.9775 4.71558H6.7963L5.49996 0.522461L4.20362 4.71558H0.0224609L3.40025 7.30323L2.12217 11.4775L5.49996 8.88981L8.87775 11.4775L7.58141 7.28434L10.9775 4.71558Z" fill="#FFCE31"/>
+                        </svg>
+                        <svg class="vector29" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M11.8012 4.71558H7.62003L6.32369 0.522461L5.02735 4.71558H0.846191L4.22398 7.30323L2.9459 11.4775L6.32369 8.88981L9.70148 11.4775L8.40514 7.28434L11.8012 4.71558Z" fill="#FFCE31"/>
+                        </svg>
+                        <svg class="vector31" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M11.6249 4.71558H7.44376L6.14742 0.522461L4.85108 4.71558H0.669922L4.04771 7.30323L2.76963 11.4775L6.14742 8.88981L9.52521 11.4775L8.22887 7.28434L11.6249 4.71558Z" fill="#FFCE31"/>
+                        </svg>
+                    </div>
+                    <div class="ipsum-dolor-sit-amet">Pitahaya y coco</div>
+                    <div class="_220">$ 23.4</div>
+                </div>
+
+                <div class="frame-125">
+                    <div class="line-1"></div>
+                    <div class="frame-41">
+                        <a href="{{ url_for('product_3') }}" class="add-to-cart">IR AHORA</a>
+
+                        <svg class="vector33" width="10" height="8" viewBox="0 0 10 8" fill="none">
+                            <path d="M5.00552 4.35997L1.94617 7.41931C1.73472 7.63077 1.39279 7.63077 1.18358 7.41931L0.675193 6.91092C0.463738 6.69947 0.463738 6.35754 0.675193 6.14834L2.84373 3.9798L0.675193 1.81127C0.463738 1.59981 0.463738 1.25788 0.675193 1.04868L1.18133 0.535788C1.39279 0.324334 1.73472 0.324334 1.94392 0.535788L5.00327 3.59513C5.21697 3.80659 5.21697 4.14852 5.00552 4.35997ZM9.32459 3.59513L6.26525 0.535788C6.05379 0.324334 5.71186 0.324334 5.50266 0.535788L4.99427 1.04418C4.78281 1.25563 4.78281 1.59756 4.99427 1.80677L7.1628 3.9753L4.99427 6.14384C4.78281 6.35529 4.78281 6.69722 4.99427 6.90642L5.50266 7.41482C5.71411 7.62627 6.05604 7.62627 6.26525 7.41482L9.32459 4.35547C9.53605 4.14851 9.53605 3.80659 9.32459 3.59513Z" fill="#042117"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="frame-214">
+            <img class="image-4" src="static/index/Cafe.png" />
+            <div class="frame-42">
+                <div class="frame-124">
+                    <div class="frame-40">
+                        <svg class="vector34" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M11.33 4.71558H7.14884L5.8525 0.522461L4.55616 4.71558H0.375L3.75279 7.30323L2.47471 11.4775L5.8525 8.88981L9.23029 11.4775L7.93395 7.28434L11.33 4.71558Z" fill="#FFCE31"/>
+                        </svg>
+                        <svg class="vector36" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M11.1537 4.71558H6.97257L5.67623 0.522461L4.37989 4.71558H0.19873L3.57652 7.30323L2.29844 11.4775L5.67623 8.88981L9.05402 11.4775L7.75768 7.28434L11.1537 4.71558Z" fill="#FFCE31"/>
+                        </svg>
+                        <svg class="vector38" width="11" height="12" viewBox="0 0 11 12" fill="none">
+                            <path d="M10.9775 4.71558H6.7963L5.49996 0.522461L4.20362 4.71558H0.0224609L3.40025 7.30323L2.12217 11.4775L5.49996 8.88981L8.87775 11.4775L7.58141 7.28434L10.9775 4.71558Z" fill="#FFCE31"/>
+                        </svg>
+                        <svg class="vector40" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M11.8012 4.71558H7.62003L6.32369 0.522461L5.02735 4.71558H0.846191L4.22398 7.30323L2.9459 11.4775L6.32369 8.88981L9.70148 11.4775L8.40514 7.28434L11.8012 4.71558Z" fill="#FFCE31"/>
+                        </svg>
+                        <svg class="vector42" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M11.6249 4.71558H7.44376L6.14742 0.522461L4.85108 4.71558H0.669922L4.04771 7.30323L2.76963 11.4775L6.14742 8.88981L9.52521 11.4775L8.22887 7.28434L11.6249 4.71558Z" fill="#FFCE31"/>
+                        </svg>
+                    </div>
+
+                    <div class="ipsum-dolor-sit-amet" >
+                        Café exfoliante </div>
+                        <div class="_220" >
+                        $ 23.4 </div>
+                        </div>
+                         <div class="frame-125" >
+                         <div class="line-1" >
+                        </div>
+                        <div class="frame-41" >
+                            <a href="{{ url_for('product_4') }}" class="add-to-cart">IR AHORA</a>
+
+                        <svg class="vector44" width="10" height="8" viewBox="0 0 10 8" fill="none">
+                            <path d="M5.00552 4.35997L1.94617 7.41931C1.73472 7.63077 1.39279 7.63077 1.18358 7.41931L0.675193 6.91092C0.463738 6.69947 0.463738 6.35754 0.675193 6.14834L2.84373 3.9798L0.675193 1.81127C0.463738 1.59981 0.463738 1.25788 0.675193 1.04868L1.18133 0.535788C1.39279 0.324334 1.73472 0.324334 1.94392 0.535788L5.00327 3.59513C5.21697 3.80659 5.21697 4.14852 5.00552 4.35997ZM9.32459 3.59513L6.26525 0.535788C6.05379 0.324334 5.71186 0.324334 5.50266 0.535788L4.99427 1.04418C4.78281 1.25563 4.78281 1.59756 4.99427 1.80677L7.1628 3.9753L4.99427 6.14384C4.78281 6.35529 4.78281 6.69722 4.99427 6.90642L5.50266 7.41482C5.71411 7.62627 6.05604 7.62627 6.26525 7.41482L9.32459 4.35547C9.53605 4.14851 9.53605 3.80659 9.32459 3.59513Z" fill="#042117"/>
+                         </svg>
+                        </div>
+                 </div>
+                </div>
+        </div>
+        </div>
+        </section>
+
+
+<!-- Sesion de informacion 2 -->
+
+<section>
+    <div class="info-container02">
+          <img class="soap5" src="static/index/Soap-5-2.jpg" />
+          <div class="info-text02">
+            <div> <h3 class="title-01">Un poco sobre nosotros</h3></div>
+            <div><p class="text-01"> Nos encontramos en la hermosa República Dominicana, liderando el movimiento hacia una vida más natural. En Delicaté, nuestra pasión va más allá de la creación de productos; es un compromiso con el bienestar y la calidad. Somos una pequeña comunidad apasionada, dedicada a proporcionar productos 100% orgánicos, sin comprometer la excelencia.</p></div>
+          </div>
+        </div>
+    </section>
+
+
+    <<!-- Sesion de infromacion 2 parte 2 -->
+    <section>
+            <div class="info-container">
+              <div class="info-text">
+                      <div class="text-container-02">
+                        <div> <h3 class="why-customer-love-us">lo que enamora a nuestros clientes</h3></div>
+                        <div><p class="lorem-ipsum"> En Delicaté, facilitamos la experiencia de compra con envíos a toda República Dominicana. Puedes realizar tus pedidos a través de nuestro sitio web o whatsapp. Recibiendo tus productos cómodamente en tu región o provincia. Nos enorgullece brindar productos de calidad y un servicio al cliente excepcional. ¡Agradecemos tu confianza y esperamos que disfrutes tanto de nuestros productos como nosotros disfrutamos creándolos!</p></div>
+                  <div class="subtitle-container">
+
+                  </div>
+                </div>
+              </div>
+              <img class="soap1" src="static/index/Soap-8.jpg" alt="Organic Soap" />
+            </div>
+
+          <div class="testimonials-section">
+            <div class="text-container">
+                <div class="heading">
+                    Lo que dicen nuestros clientes
+                </div>
+                <div class="paragraph">
+                    Nuestros clientes satisfechos comparten sus historias de éxito y experiencias en su camino hacia una mejor salud y bienestar.
+                </div>
+            </div>
+            <div class="container">
+                <div class="items-container">
+                    <div class="card">
+                        <div class="container2">
+                            <svg class="icon" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                                <path d="M3 28V21.7055C3 19.8953 3.33047 18.0131 3.99142 16.0589C4.67239 14.0842 5.59371 12.2225 6.75536 10.4741C7.93705 8.70501 9.25894 7.21365 10.721 6L15.7682 9.36325C14.5866 11.194 13.5951 13.1071 12.794 15.1024C12.0129 17.0771 11.6323 19.2576 11.6524 21.6438V28H3ZM18.2318 28V21.7055C18.2318 19.8953 18.5622 18.0131 19.2232 16.0589C19.9041 14.0842 20.8255 12.2225 21.9871 10.4741C23.1688 8.70501 24.4907 7.21365 25.9528 6L31 9.36325C29.8183 11.194 28.8269 13.1071 28.0258 15.1024C27.2446 17.0771 26.8641 19.2576 26.8841 21.6438V28H18.2318Z" fill="#356554"/>
+                            </svg>
+                            <div class="paragraph2">
+                                "Delicaté transformó mi rutina de cuidado. Productos orgánicos y atención personalizada hacen que cada compra sea única. Mi piel agradece la dedicación de esta maravillosa empresa."
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="container3">
+                            <div class="name">
+                                José Miguel
+                            </div>
+                        </div>
+                    </div>
+
+              <div class="card">
+                  <div class="container2">
+                      <svg class="icon2" width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="">
+                          <path d="M3.3335 28V21.7055C3.3335 19.8953 3.66397 18.0131 4.32491 16.0589C5.00589 14.0842 5.9272 12.2225 7.08886 10.4741C8.27055 8.70501 9.59244 7.21365 11.0545 6L16.1017 9.36325C14.92 11.194 13.9286 13.1071 13.1275 15.1024C12.3464 17.0771 11.9658 19.2576 11.9859 21.6438V28H3.3335ZM18.5653 28V21.7055C18.5653 19.8953 18.8957 18.0131 19.5567 16.0589C20.2376 14.0842 21.159 12.2225 22.3206 10.4741C23.5023 8.70501 24.8242 7.21365 26.2863 6L31.3335 9.36325C30.1518 11.194 29.1604 13.1071 28.3592 15.1024C27.5781 17.0771 27.1976 19.2576 27.2176 21.6438V28H18.5653Z" fill="#356554"/>
+                      </svg>
+                      <div class="paragraph2">
+                          "Delicaté cambió mi forma de cuidarme. Productos 100% orgánicos y atención excepcional. Una joya comprometida con la salud en República Dominicana."
+                      </div>
+                  </div>
+                  <div class="line"></div>
+                  <div class="container3">
+                      <div class="name">
+                          Enyer Andújar
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card">
+                  <div class="container2">
+                      <svg class="icon3" width="35" height="34" viewBox="0 0 35 34" fill="none">
+                          <path d="M3.66699 28V21.7055C3.66699 19.8953 3.99746 18.0131 4.65841 16.0589C5.33938 14.0842 6.2607 12.2225 7.42236 10.4741C8.60404 8.70501 9.92593 7.21365 11.388 6L16.4352 9.36325C15.2535 11.194 14.2621 13.1071 13.461 15.1024C12.6799 17.0771 12.2993 19.2576 12.3194 21.6438V28H3.66699ZM18.8988 28V21.7055C18.8988 19.8953 19.2292 18.0131 19.8902 16.0589C20.5711 14.0842 21.4925 12.2225 22.6541 10.4741C23.8358 8.70501 25.1577 7.21365 26.6198 6L31.667 9.36325C30.4853 11.194 29.4939 13.1071 28.6927 15.1024C27.9116 17.0771 27.5311 19.2576 27.5511 21.6438V28H18.8988Z" fill="#356554"/>
+                      </svg>
+                      <div class="paragraph2">
+                          "Delicaté, mi refugio natural. Calidad, compromiso y pasión incomparables. Esta joya local ha transformado mi cuidado personal."
+                      </div>
+                  </div>
+                  <div class="line"></div>
+                  <div class="container3">
+                      <div class="name">
+                          Ketsia Concepción
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </section>
+
+
+
+    <!-- Blog -->
+    <section class="blogs-container">
+
+        <div class="blog-title01" >
+                <div class="from-out-blog" >
+          Artículos de nuestos blog </div>
+                <div class="latest-updated" >
+          Últimos artículos </div>
+          </div>
+    <!-- Segundo blog -->
+   <article class="blog-article-02">
+    <!-- ... Contenido del segundo blog ... -->
+    <div class="blog-card-panel-02">
+      <div class="blog-rectangle-02"></div>
+      <div class="blog-title-02"> Caléndula. La Flor que Cuida tu Piel</div>
+      <div class="blog-date-02">Diciembre 12, 2023</div>
+      <a href="{{ url_for('read_more2') }}" class="blog-read-more-02">Leer ahora</a>
+      <img class="blog-image-02" src="static/index/calendula.jpg" alt="Blog Image" />
+      <div class="blog-content-02">
+        Hoy nos sumergimos en el fascinante mundo de la caléndula, esa hermosa flor que no solo adorna jardines, ¡sino que también se convierte en un tesoro para el cuidado de nuestra piel!
+      </div>
+    </div>
+  </article>
+
+  <!-- Tercer blog -->
+  <article class="blog-article-03">
+    <!-- ... Contenido del tercer blog ... -->
+    <div class="blog-card-panel-03">
+      <div class="blog-rectangle-03"></div>
+      <div class="blog-title-03">
+        8 increibles Beneficios del café </div>
+      <div class="blog-date-03">Diciembre 12, 2023</div>
+      <a href="{{ url_for('read_more3') }}" class="blog-read-more-02">Leer ahora</a>
+
+
+      <div class="blog-content-03">
+        ¿Eres amante del café? Pues aquí tienes más razones para amarlo. El café no solo es un delicioso estimulante para empezar el día, ¡también es un aliado sorprendente para tu piel! Descubre los 8 beneficios que...
+      </div>
+      <img class="blog-image-03" src="static/index/cafe.jpg" alt="Blog Image" />
+    </div>
+  </article>
+
+  <!-- Cuarto blog -->
+  <article class="blog-article-04">
+    <!-- ... Contenido del cuarto blog ... -->
+     <div class="blog-card-panel-04">
+  <div class="blog-rectangle-04"></div>
+  <div class="blog-title-04">Zumo para tu Piel</div>
+  <div class="blog-date-04">Diciembre 12, 2023</div>
+  <a href="{{ url_for('read_more4') }}" class="blog-read-more-02">Leer ahora</a>
+
+  <div class="blog-content-04">
+        Las naranjas, además de ser deliciosas y ricas en vitamina C, ofrecen una gama de beneficios que van más allá de tu organismo. Descubre cómo esta fruta cítrica puede transformar tu piel, brindándote una apariencia suave y saludable...
+  </div>
+  <img class="blog-image-04" src="static/index/naranja.jpg" alt="Blog Image" />
+</div>
+  </article>
+  </section>
+
+
+<!-- News letter -->
+<section class="call-to-action">
+    <div class="call-to-action-container">
+        <div class="newsletter-heading">
+            Newsletter
+        </div>
+        <div class="newsletter-description">
+            ¡Únete a nuestro Boletín para descubrir las últimas publicaciones, productos y fotos exclusivas! <br/>¡Permanece informado!
+        </div>
+        <div class="subscription-form">
+            <div class="input-wrapper">
+                <input type="email" id="emailInput" class="email-input" placeholder="Tu correo electrónico" onfocus="clearExampleEmail()" onblur="restoreExampleEmail()">
+            </div>
+
+            <button class="subscribe-button" onclick="subscribe()">
+                <div class="cta">Suscríbete</div>
+            </button>
+
+        </div>
+    </div>
+</section>
+
+<script>
+    function clearExampleEmail() {
+        var emailInput = document.getElementById("emailInput");
+        if (emailInput.value === "example@example.com") {
+            emailInput.value = "";
+        }
+    }
+
+    function restoreExampleEmail() {
+        var emailInput = document.getElementById("emailInput");
+        if (emailInput.value === "") {
+            emailInput.value = "example@example.com";
+        }
+    }
+
+    function isValidEmail(email) {
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    function subscribe() {
+        var emailInput = document.getElementById("emailInput");
+
+        if (!isValidEmail(emailInput.value)) {
+            alert("Por favor, introduce un correo electrónico válido.");
+            return;
+        }
+
+        alert("¡Suscripción exitosa! Gracias por suscribirte.");
+
+        // Limpiar el campo de entrada después de una suscripción exitosa
+        emailInput.value = "";
+    }
+</script>
+
+
+
+</main>
+    <!-- Footer -->
+    <footer id="miFooter" class="footer">
+      <div class="container01">
+        <div class="copyright">
+          <p> Copyright &copy; 2023 | Delicaté</p>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

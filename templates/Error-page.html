@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descripción de tu sitio web">
+  <meta name="keywords" content="palabras clave, para, SEO">
+  <meta name="author" content="Jonas Javier Encarnacion">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="../static/About us/Error-page.css">
+
+
+
+  <!-- Contenido principal -->
+<main class="main-container-02">
+    <img class="main-illustration" src="../static/About us/Error-photo.png" />
+
+    <!-- Informacion -->
+    <div class="info-container">
+        <div class="content-text">
+         La página que estás buscando no está disponible en este momento. Estamos trabajando para solucionar el problema. Por favor, vuelve a intentarlo más tarde.
+        </div>
+        <div class="error-message">
+            Oops! pagina no encontrada
+        </div>
+        <a href="{{ url_for('home') }}" class="home-button">Pagina principal</a>
+    </div>
+</main>
+
+
+<!-- Footer -->
+<footer id="miFooter" class="footer">
+    <div class="container01">
+      <div class="copyright">
+        <p> Copyright &copy; 2023 | Delicaté</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

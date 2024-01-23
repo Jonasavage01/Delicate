@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descripción de tu sitio web">
+  <meta name="keywords" content="palabras clave, para, SEO">
+  <meta name="author" content="Tu Nombre">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="../static/Contact/Contact-section.css">
+
+  <!-- Título de la página -->
+  <title>Título de tu página</title>
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <div class="header">
+        <div class="title-site">
+          Descubre los mejores jabones orgánicos para tu piel
+        </div>
+    </div>
+
+<!-- barra de busqueda -->
+<div class="midle">
+    <div class="search">
+        <div class="searech">
+            <div class="search2">
+                <svg class="group-01" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                    <path d="M8.16667 14.3333C11.8486 14.3333 14.8333 11.3486 14.8333 7.66667C14.8333 3.98477 11.8486 1 8.16667 1C4.48477 1 1.5 3.98477 1.5 7.66667C1.5 11.3486 4.48477 14.3333 8.16667 14.3333Z" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16.4999 16L12.8749 12.375" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+
+            <input type="text" class="search3" placeholder="Search...">
+        </div>
+        <div class="button">
+            <button type="button" class="search-button">
+                Search
+            </button>
+        </div>
+    </div>
+</div>
+        </div>
+        <div class="icons">
+          <div class="devider"></div>
+          <div class="shopping-card">
+              <div class="cart">
+                  <svg class="bag" viewBox="0 0 34 34" width="34" height="34"><path d="M12,12A6,6,0,1,0,6,6,6.006,6.006,0,0,0,12,12ZM12,2A4,4,0,1,1,8,6,4,4,0,0,1,12,2Z"/><path d="M12,14a9.01,9.01,0,0,0-9,9,1,1,0,0,0,2,0,7,7,0,0,1,14,0,1,1,0,0,0,2,0A9.01,9.01,0,0,0,12,14Z"/>
+                  </svg>
+
+              </div>
+              <div class="shopping-cart">
+                {% if login_link == url_for('profile') %}
+                <a href="{{ url_for('login2') }}" class="shopping-cart-link">Mi perfil</a>
+                {% else %}
+                <a href="{{ url_for('login2') }}" class="shopping-cart-link">Iniciar sesión</a>
+                {% endif %}
+            </div>
+
+            </div>
+        </div>
+        <img class="logo" src="../static/Contact/logo.png" />
+    </div>
+
+
+    <!-- Menu de navegación links -->
+<nav>
+    <div class="main-container">
+      <div class="navigation">
+        <div class="navigation-container">
+          <div class="icons-container">
+            <div class="home-container">
+              <a href="{{ url_for('home') }}" class="home">Home</a>
+          </div>
+          <div class="shop-container">
+              <a href="{{ url_for('shop') }}" class="shop">Tienda</a>
+          </div>
+          <div class="blog-conteiner">
+              <a href="{{ url_for('blog') }}" class="blog">Blog</a>
+          </div>
+          <div class="contact-conteiner">
+              <a href="{{ url_for('Contact') }}" class="blog">Contacto</a>
+          </div>
+          <div class="about-Us-conteiner">
+              <a href="{{ url_for('Aboutus') }}" class="blog">Sobre nosotros</a>
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- Phone -->
+      <div class="contact-info">
+        <div class="phone-icon">
+          <svg class="phone-icon-svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+            <!-- ... (tu código SVG) ... -->
+            <path d="M14.4359 2.375C15.9193 2.77396 17.2718 3.55567 18.358 4.64184C19.4441 5.72801 20.2258 7.08051 20.6248 8.56388" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M13.5306 5.75684C14.4205 5.99622 15.2318 6.46518 15.8833 7.11675C16.5349 7.76832 17.0039 8.57964 17.2433 9.46946" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7.115 11.6522C8.02238 13.5078 9.5263 15.0053 11.3859 15.9047C11.522 15.9692 11.6727 15.997 11.8229 15.9855C11.9731 15.974 12.1178 15.9235 12.2425 15.839L14.9812 14.0138C15.1022 13.933 15.2414 13.8837 15.3862 13.8702C15.5311 13.8568 15.677 13.8797 15.8107 13.9368L20.9339 16.133C21.1079 16.207 21.2532 16.3354 21.3479 16.4991C21.4426 16.6627 21.4815 16.8527 21.4589 17.0404C21.2967 18.3074 20.6784 19.4718 19.7196 20.3158C18.7608 21.1597 17.5273 21.6253 16.25 21.6254C12.3049 21.6254 8.52139 20.0582 5.73179 17.2686C2.94218 14.479 1.375 10.6955 1.375 6.75041C1.37512 5.4732 1.84074 4.23982 2.68471 3.28118C3.52867 2.32254 4.6931 1.70437 5.96 1.54241C6.14771 1.51977 6.33769 1.55873 6.50134 1.65342C6.66499 1.7481 6.79345 1.89339 6.86738 2.06741L9.06537 7.19491C9.1219 7.32739 9.14485 7.47178 9.13218 7.61527C9.11951 7.75875 9.07162 7.89688 8.99275 8.01741L7.17275 10.7982C7.09015 10.9234 7.04141 11.0679 7.03129 11.2175C7.02117 11.3672 7.05001 11.517 7.115 11.6522V11.6522Z" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+        </div>
+        <div class="phone-number">
+          (849) 862-5049
+        </div>
+      </div>
+    </div>
+
+    <!--banner  -->
+<div class="breadcrumbs" style="background: url(breadcrumbs.png) center; background-size: cover;">
+    <div class="location" >
+              <div class="home-1-1" >
+                        <svg class="group-02" width="18" height="19" viewBox="0 0 18 19" fill="none">
+                                  <path d="M1 8L9 1L17 8V18H12V14C12 13.2044 11.6839 12.4413 11.1213 11.8787C10.5587 11.3161 9.79565 11 9 11C8.20435 11 7.44129 11.3161 6.87868 11.8787C6.31607 12.4413 6 13.2044 6 14V18H1V8Z" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+              </div>
+              <svg class="group2" width="6" height="10" viewBox="0 0 6 10" fill="none" >
+                        <path d="M1 0.916341L5.08333 4.99967L1 9.08301" stroke="#808080" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div class="vegetables" >
+Contacto </div>
+    </div>
+</div>
+
+<img class="banner" src="../static/Contact/banner.png" alt="Imagen 1">
+
+    </nav>
+  </header>
+<!-- Contenido principal -->
+<!-- Imagenes -->
+
+<main>
+    <!-- Contact-info -->
+    <section>
+    <div class="contact-information">
+        <div class="address-section">
+            <div class="map-pin-icon">
+                <svg class="location-icon" width="34" height="45" viewBox="0 0 34 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- ... Código SVG para el icono de ubicación ... -->
+                    <path d="M2.65625 43.2188H31.3438" stroke="#2C742F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M17 24.0938C18.6908 24.0938 20.3123 23.4221 21.5078 22.2266C22.7033 21.031 23.375 19.4095 23.375 17.7188C23.375 16.028 22.7033 14.4065 21.5078 13.2109C20.3123 12.0154 18.6908 11.3438 17 11.3438C15.3092 11.3438 13.6877 12.0154 12.4922 13.2109C11.2966 14.4065 10.625 16.028 10.625 17.7188C10.625 19.4095 11.2966 21.031 12.4922 22.2266C13.6877 23.4221 15.3092 24.0938 17 24.0938V24.0938Z" stroke="#2C742F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M32.9375 17.7188C32.9375 32.0625 17 43.2188 17 43.2188C17 43.2188 1.0625 32.0625 1.0625 17.7188C1.0625 13.4919 2.74162 9.4381 5.73049 6.44924C8.71935 3.46037 12.7731 1.78125 17 1.78125C21.2269 1.78125 25.2807 3.46037 28.2695 6.44924C31.2584 9.4381 32.9375 13.4919 32.9375 17.7188V17.7188Z" stroke="#2C742F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="address-text">
+                República Dominicana. Monseñor Nouel. Sector Juma Bonao.
+            </div>
+        </div>
+        <div class="divider-05"></div>
+        <div class="email-section">
+            <div class="email-icon">
+                <svg class="email-envelope-icon" width="52" height="41" viewBox="0 0 52 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- ... Código SVG para el icono de sobre de correo electrónico ... -->
+                    <path d="M48.95 0.953125H3.05C1.64172 0.953125 0.5 2.09475 0.5 3.50313V37.5031C0.5 38.9114 1.64162 40.0531 3.05 40.0531H48.95C50.3583 40.0531 51.5 38.9115 51.5 37.5031V3.50313C51.5 2.09485 50.3584 0.953125 48.95 0.953125ZM49.8 37.5032C49.8 37.9727 49.4195 38.3532 48.95 38.3532H3.05C2.58054 38.3532 2.20003 37.9727 2.20003 37.5032V3.50313C2.20003 3.03367 2.58054 2.65316 3.05 2.65316H48.95C49.4195 2.65316 49.8 3.03367 49.8 3.50313V37.5032V37.5032Z" fill="#2C742F"/>
+                    <path d="M47.3225 4.35484C47.0978 4.33522 46.8746 4.40564 46.702 4.55068L27.0924 21.0236C26.46 21.5552 25.5369 21.5552 24.9045 21.0236L5.29507 4.55058C5.06248 4.35534 4.74334 4.29896 4.45796 4.40276C4.17257 4.50655 3.96419 4.75478 3.9114 5.0539C3.85861 5.35303 3.96937 5.65754 4.20196 5.85277L23.8115 22.3249C25.0753 23.389 26.9217 23.389 28.1856 22.3249L47.795 5.85287C47.9677 5.70794 48.0757 5.50035 48.0953 5.27573C48.115 5.05111 48.0445 4.82789 47.8995 4.65527C47.7547 4.48244 47.5471 4.37447 47.3225 4.35484Z" fill="#2C742F"/>
+                    <path d="M16.8522 22.2079C16.5513 22.1408 16.2377 22.2418 16.0325 22.4719L4.13247 35.2219C3.91712 35.4424 3.83803 35.7624 3.92588 36.0578C4.01374 36.3534 4.25469 36.5781 4.55551 36.6452C4.85643 36.7123 5.17 36.6113 5.3752 36.3812L17.2752 23.6312C17.4906 23.4107 17.5697 23.0908 17.4818 22.7953C17.394 22.4999 17.1531 22.2751 16.8522 22.2079Z" fill="#2C742F"/>
+                    <path d="M35.9689 22.4719C35.7639 22.2418 35.4502 22.1408 35.1493 22.2079C34.8483 22.2751 34.6075 22.4999 34.5196 22.7953C34.4318 23.0909 34.5109 23.4107 34.7262 23.6312L46.6263 36.3812C46.949 36.7118 47.4765 36.7241 47.8143 36.4089C48.1521 36.0938 48.1764 35.5666 47.869 35.2218L35.9689 22.4719Z" fill="#2C742F"/>
+              </svg>
+            </div>
+            <div class="email-address">
+                Help.Delicate@gmail.com<br/>Hachijonas@gmail.com
+            </div>
+        </div>
+        <div class="divider-05"></div>
+        <div class="call-section-02">
+            <div class="phone-call-icon-02">
+                <svg class="phone-icon-02" width="42" height="43" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- ... Código SVG para el icono de teléfono ... -->
+                    <path d="M26.9844 3.24219C29.9264 4.03345 32.6088 5.58385 34.7631 7.73809C36.9173 9.89233 38.4677 12.5748 39.259 15.5168" stroke="#2C742F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M25.1875 9.95312C26.9523 10.4279 28.5614 11.358 29.8537 12.6503C31.146 13.9426 32.0761 15.5517 32.5509 17.3165" stroke="#2C742F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M12.4625 21.6416C14.2621 25.322 17.2449 28.292 20.933 30.0757C21.2031 30.2036 21.5018 30.2589 21.7998 30.2361C22.0977 30.2133 22.3846 30.1131 22.632 29.9456L28.0639 26.3255C28.3038 26.1653 28.5799 26.0674 28.8671 26.0408C29.1544 26.0141 29.4437 26.0595 29.709 26.1728L39.8699 30.5287C40.215 30.6753 40.5032 30.9301 40.691 31.2546C40.8788 31.5792 40.9561 31.956 40.9112 32.3283C40.5895 34.8411 39.3631 37.1506 37.4616 38.8244C35.56 40.4983 33.1135 41.4217 30.5802 41.4219C22.7558 41.4219 15.2518 38.3136 9.71909 32.7809C4.18637 27.2482 1.07813 19.7442 1.07812 11.9198C1.07836 9.38665 2.00185 6.94044 3.67571 5.03914C5.34957 3.13784 7.65903 1.91181 10.1717 1.59057C10.544 1.54568 10.9208 1.62294 11.2454 1.81074C11.5699 1.99853 11.8247 2.28669 11.9713 2.63182L16.3307 12.8014C16.4428 13.0641 16.4883 13.3505 16.4632 13.6351C16.4381 13.9196 16.3431 14.1936 16.1867 14.4327L12.577 19.9478C12.4132 20.1962 12.3165 20.4828 12.2964 20.7796C12.2764 21.0765 12.3336 21.3734 12.4625 21.6416V21.6416Z" stroke="#2C742F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="phone-numbers">
+                (849) 862-5049<br/>(809) 868-7371
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- contact me -->
+<section class="contact-section">
+  <div class="background"></div>
+
+  <div class="contact-button">
+      <button class="button-text" onclick="sendMessage()">Send Message</button>
+  </div>
+
+  <div class="subject-field">
+      <input type="text" id="subject" class="field-label" placeholder="Subject">
+  </div>
+
+  <div class="greeting-field">
+      <input type="text" id="greeting" class="greeting-text" placeholder="Hello...">
+  </div>
+
+  <div class="email-field">
+      <input type="email" id="email" class="filled-email" placeholder="Email">
+  </div>
+
+  <div class="template-field">
+      <input type="text" id="name" class="text" placeholder="Nombre">
+  </div>
+  <div class="contact-message">
+    ¿Te gustaría saludarnos o necesitas ayuda? No dudes en contactarnos.
+  </div>
+
+  <div class="say-hello-prompt">
+    ¡Comienza con un Hola!
+  </div>
+</section>
+
+<script>
+
+     // Función para validar el formato del correo electrónico
+     function isValidEmail(email) {
+        // Expresión regular para validar el formato del correo electrónico
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Devuelve true si el correo electrónico es válido, de lo contrario, false
+        return emailRegex.test(email);
+    }
+
+    function sendMessage() {
+        var subject = document.getElementById("subject").value;
+        var greeting = document.getElementById("greeting").value;
+        var email = document.getElementById("email").value;
+        var name = document.getElementById("name").value;
+
+        if (!isValidEmail(email)) {
+            alert("Por favor, introduce un correo electrónico válido.");
+            return;
+        }
+
+        // Enviar datos al servidor usando Fetch API
+        fetch('/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                subject: subject,
+                greeting: greeting,
+                email: email,
+                name: name,
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+            if (data.success) {
+                // Limpiar los campos después de un envío exitoso
+                document.getElementById("subject").value = '';
+                document.getElementById("greeting").value = '';
+                document.getElementById("email").value = '';
+                document.getElementById("name").value = '';
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert("Hubo un error al enviar el mensaje. Por favor, inténtelo más tarde.");
+        });
+    }
+</script>
+</section>
+</main>
+
+<!-- Footer -->
+<footer id="miFooter" class="footer">
+    <div class="container01">
+      <div class="copyright">
+        <p> Copyright &copy; 2023 | Delicaté</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

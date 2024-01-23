@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descripción breve de tu página">
+    <meta name="keywords" content="Palabras clave relevantes">
+    <meta name="author" content="Tu Nombre">
+
+    <!-- Etiquetas Open Graph para compartir en redes sociales -->
+    <meta property="og:title" content="Título de tu página">
+    <meta property="og:description" content="Descripción para compartir en redes sociales">
+    <meta property="og:image" content="URL de la imagen asociada">
+
+    <!-- Favicon (icono en la pestaña del navegador) -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../static/Blog-pages/Blog/firts-blog.css">
+
+</head>
+
+<!-- Body -->
+
+<body>
+    <header>
+        <!-- Menu de navegación -->
+          <div class="header">
+              <div class="title-site">
+                Descubre los mejores jabones orgánicos para tu piel
+              </div>
+          </div>
+
+              <!-- barra de busqueda -->
+              <div class="midle">
+                <div class="search">
+                    <div class="searech">
+                        <div class="search2">
+                            <svg class="group-01" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                                <path d="M8.16667 14.3333C11.8486 14.3333 14.8333 11.3486 14.8333 7.66667C14.8333 3.98477 11.8486 1 8.16667 1C4.48477 1 1.5 3.98477 1.5 7.66667C1.5 11.3486 4.48477 14.3333 8.16667 14.3333Z" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16.4999 16L12.8749 12.375" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+
+                        <input type="text" class="search3" placeholder="Search...">
+                    </div>
+                    <div class="button">
+                        <button type="button" class="search-button">
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+                    </div>
+                    <div class="icons">
+                      <div class="devider"></div>
+                      <div class="shopping-card">
+                          <div class="cart">
+                              <svg class="bag" viewBox="0 0 34 34" width="34" height="34"><path d="M12,12A6,6,0,1,0,6,6,6.006,6.006,0,0,0,12,12ZM12,2A4,4,0,1,1,8,6,4,4,0,0,1,12,2Z"/><path d="M12,14a9.01,9.01,0,0,0-9,9,1,1,0,0,0,2,0,7,7,0,0,1,14,0,1,1,0,0,0,2,0A9.01,9.01,0,0,0,12,14Z"/>
+                              </svg>
+
+                          </div>
+                          <div class="shopping-cart">
+                            {% if login_link == url_for('profile') %}
+                            <a href="{{ url_for('login2') }}" class="shopping-cart-link">Mi perfil</a>
+                            {% else %}
+                            <a href="{{ url_for('login2') }}" class="shopping-cart-link">Iniciar sesión</a>
+                            {% endif %}
+                        </div>
+                        </div>
+                    </div>
+                    <img class="logo" src="../static/Blog-pages/logo.png" />
+                </div>
+
+                  <!-- Menu de navegación links -->
+            <nav>
+                    <div class="main-container">
+                      <div class="navigation">
+                        <div class="navigation-container">
+                          <div class="icons-container">
+                            <div class="home-container">
+                              <a href="{{ url_for('home') }}" class="home">Home</a>
+                          </div>
+                          <div class="shop-container">
+                              <a href="{{ url_for('shop') }}" class="shop">Tienda</a>
+                          </div>
+                          <div class="blog-conteiner">
+                              <a href="{{ url_for('blog') }}" class="blog">Blog</a>
+                          </div>
+                          <div class="contact-conteiner">
+                              <a href="{{ url_for('Contact') }}" class="blog">Contacto</a>
+                          </div>
+                          <div class="about-Us-conteiner">
+                              <a href="{{ url_for('Aboutus') }}" class="blog">Sobre nosotros</a>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Phone -->
+                      <div class="contact-info">
+                        <div class="phone-icon">
+                          <svg class="phone-icon-svg" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- ... (tu código SVG) ... -->
+                            <path d="M14.4359 2.375C15.9193 2.77396 17.2718 3.55567 18.358 4.64184C19.4441 5.72801 20.2258 7.08051 20.6248 8.56388" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.5306 5.75684C14.4205 5.99622 15.2318 6.46518 15.8833 7.11675C16.5349 7.76832 17.0039 8.57964 17.2433 9.46946" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.115 11.6522C8.02238 13.5078 9.5263 15.0053 11.3859 15.9047C11.522 15.9692 11.6727 15.997 11.8229 15.9855C11.9731 15.974 12.1178 15.9235 12.2425 15.839L14.9812 14.0138C15.1022 13.933 15.2414 13.8837 15.3862 13.8702C15.5311 13.8568 15.677 13.8797 15.8107 13.9368L20.9339 16.133C21.1079 16.207 21.2532 16.3354 21.3479 16.4991C21.4426 16.6627 21.4815 16.8527 21.4589 17.0404C21.2967 18.3074 20.6784 19.4718 19.7196 20.3158C18.7608 21.1597 17.5273 21.6253 16.25 21.6254C12.3049 21.6254 8.52139 20.0582 5.73179 17.2686C2.94218 14.479 1.375 10.6955 1.375 6.75041C1.37512 5.4732 1.84074 4.23982 2.68471 3.28118C3.52867 2.32254 4.6931 1.70437 5.96 1.54241C6.14771 1.51977 6.33769 1.55873 6.50134 1.65342C6.66499 1.7481 6.79345 1.89339 6.86738 2.06741L9.06537 7.19491C9.1219 7.32739 9.14485 7.47178 9.13218 7.61527C9.11951 7.75875 9.07162 7.89688 8.99275 8.01741L7.17275 10.7982C7.09015 10.9234 7.04141 11.0679 7.03129 11.2175C7.02117 11.3672 7.05001 11.517 7.115 11.6522V11.6522Z" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+                        </div>
+                        <div class="phone-number">
+                          (849) 862-5049
+                        </div>
+                      </div>
+                    </div>
+                  </nav>
+
+
+
+              <!--banner  -->
+            <div class="breadcrumbs" style="background: url(breadcrumbs.png) center; background-size: cover;">
+                    <div class="location" >
+                              <div class="home-1-1" >
+                                        <svg class="group-02" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns=>
+                                                  <path d="M1 8L9 1L17 8V18H12V14C12 13.2044 11.6839 12.4413 11.1213 11.8787C10.5587 11.3161 9.79565 11 9 11C8.20435 11 7.44129 11.3161 6.87868 11.8787C6.31607 12.4413 6 13.2044 6 14V18H1V8Z" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                              </div>
+                              <svg class="group2" width="6" height="10" viewBox="0 0 6 10" fill="none" >
+                                        <path d="M1 0.916341L5.08333 4.99967L1 9.08301" stroke="#808080" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                              <div class="vegetables" >
+            Blog </div>
+                    </div>
+            </div>
+
+            <img class="banner" src="../static/Blog-pages/banner.png" alt="Imagen 1">
+        </header>
+
+<!-- Contenido principal -->
+<main>
+
+    <!-- Portada -->
+    <img class="Portada" src="../static/Blog-pages/calendula.jpg" alt="Portada del Blog">
+
+    <!-- Titulo del blog -->
+    <h1 class="finibus-bonorum-et-malorum">Caléndula: La Flor que Cuida tu Piel</h1>
+
+<!-- Contenedor de Author y Fecha -->
+<div class="author-and-date">
+    <!-- Author -->
+    <div class="written-by-john-doe">Escrito por Jonas Javier Encarnacion</div>
+
+    <!-- Fecha -->
+    <div class="monday-may-20">Diciembre 12, 2023</div>
+  </div>
+
+
+ <div class="line-2" >
+</div>
+
+    <!-- Contenido -->
+    <article class="section-container">
+      <section class="section2">
+        <!-- Sección 1.10.32 -->
+        <p>
+          Hoy nos sumergimos en el fascinante mundo de la caléndula, esa hermosa flor que no solo adorna jardines, ¡sino que también se convierte en un tesoro para el cuidado de nuestra piel!
+
+¿Qué es la caléndula y por qué es tan especial?
+
+La caléndula no es solo una flor bonita, ¡es una pequeña maravilla de la naturaleza! Con más de 3,000 años de historia, ha sido utilizada desde los antiguos egipcios hasta nuestros días por sus propiedades medicinales y cosméticas.
+
+
+        </p>
+        <!-- Contenido de la sección -->
+      </section>
+
+      <section class="section3">
+        <!-- Sección 1.10.33 -->
+        <p>
+
+Beneficios de la Caléndula para tu Piel:
+
+Regeneración y Cicatrización: La caléndula actúa como un superhéroe para tu piel, acelerando la curación y cicatrización de heridas, cortes o picaduras. ¡Adiós, molestias!
+
+Antiinflamatoria y Calmante: ¿Piel sensible? La caléndula es tu amiga. Sus propiedades antiinflamatorias y calmantes alivian rojeces e irritaciones.
+
+Antioxidante Natural: Combate los signos del envejecimiento prematuro. ¡Hola, piel radiante y joven!
+
+Hidratación Profunda: Los ácidos grasos de la caléndula nutren tu piel, dándole suavidad, elasticidad y firmeza. ¡Hidratación en cada pétalo!
+
+Combate Problemas Cutáneos: Desde acné hasta eczemas, la caléndula es una aliada poderosa para mantener tu piel en su mejor forma.
+</p>
+        <!-- Contenido de la sección -->
+      </section>
+
+      <section class="section4">
+        <!-- Sección 1.10.33 - Parte 2 -->
+        <p>
+          Conclusión:
+
+          La caléndula es más que una flor decorativa; es un regalo natural para tu piel. Con beneficios que van desde la regeneración hasta la hidratación profunda, esta pequeña maravilla merece un lugar en tu rutina de belleza.
+
+          ¿Ya has experimentado los encantos de la caléndula? ¡Cuéntanos tu historia en los comentarios y comparte el amor floral!
+
+          Gracias por leer este articulo y  explorar los secretos de la caléndula. ¡Hasta la próxima, amantes de la belleza natural! 🌼✨
+
+        </p>
+        <!-- Contenido de la sección -->
+      </section>
+    </article>
+  </main>
+
+<!-- Footer -->
+
+    <footer>
+ <footer id="miFooter" class="footer">
+    <div class="container01">
+      <div class="copyright">
+        <p> Copyright &copy; 2023 | Delicaté</p>
+      </div>
+    </div>
+  </footer>
+
+    </footer>
+</body>
+</html>
