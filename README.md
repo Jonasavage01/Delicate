@@ -1,7 +1,6 @@
 
 # Delicate Web Application
 
-#### Video Demo: [https://youtu.be/4lXp8we1dvw]
 
 ## Description:
 Delicate is a long-term project aiming to establish an online presence for our family-owned organic soap business, "Delicate." Specializing in organic soap production, our website serves as a platform for customers to learn about who we are, our products, and the values we uphold. The project originated from the need to create an accessible space for our customers to connect with our brand, stay informed, and eventually make purchases.
